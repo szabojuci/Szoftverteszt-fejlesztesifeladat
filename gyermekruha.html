@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    
+
+    <div class="container">
+        <div class="dropdown">
+
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                fiú
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div class="row">
+                    <div class="col-4">
+                        <a class="dropdown-item" href="#">
+                            <div class="card">
+                                <img id="product-img" src="" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 id="product-title" class="card-title"></h5>
+                                    <p id="product-description" class="card-text"></p>
+                                </div>
+                                <div class="pagination">
+                                    <button id="prev-btn" class="prev-btn"  onclick="event.stopPropagation();">Előző</button>
+                                    <button id="next-btn" class="next-btn"  onclick="event.stopPropagation();">Következő</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a class="dropdown-item" href="#">
+                            <div class="card">
+                                <img src="path/to/image" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Pulóver</h5>
+                                    <p class="card-text">Leírás a ruhadarabról</p>
+                                </div>
+                                <div class="pagination">
+                                    <button class="prev-btn">Előző</button>
+                                    <button class="next-btn">Következő</button>
+                                  </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a class="dropdown-item" href="#">
+                            <div class="card">
+                                <img src="path/to/image" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nadrág</h5>
+                                    <p class="card-text">Leírás a ruhadarabról</p>
+                                </div>
+                                <div class="pagination">
+                                    <button class="prev-btn">Előző</button>
+                                    <button class="next-btn">Következő</button>
+                                  </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <a class="dropdown-item" href="#">
+                            <div class="card">
+                                <img src="path/to/image" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Kabát</h5>
+                                    <p class="card-text">Leírás a ruhadarabról</p>
+                                </div>
+                                <div class="pagination">
+                                    <button class="prev-btn">Előző</button>
+                                    <button class="next-btn">Következő</button>
+                                  </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a class="dropdown-item" href="#">
+                            <div class="card">
+                                <img src="path/to/image" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Zokni</h5>
+                                    <p class="card-text">Leírás a ruhadarabról</p>
+                                </div>
+                                <div class="pagination">
+                                    <button class="prev-btn">Előző</button>
+                                    <button class="next-btn">Következő</button>
+                                  </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a class="dropdown-item" href="#">
+                            <div class="card">
+                                <img src="path/to/image" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">fehérnemű</h5>
+                                    <p class="card-text">Leírás a ruhadarabról</p>
+                                </div>
+                                <div class="pagination">
+                                    <button class="prev-btn">Előző</button>
+                                    <button class="next-btn">Következő</button>
+                                  </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <script>
+                     const products = [
+        {
+            imgSrc: "https://polomania.hu/images/items/tn3/mobile/3/6/f/36f8fe51.jpg",
+            title: "Póló 1",
+            description: "Leírás a ruhadarabról 1"
+        },
+        {
+            imgSrc: "https://poloido.hu/wp-content/uploads/faszfej-polo-feher.png",
+            title: "Póló 2",
+            description: "Leírás a ruhadarabról 2"
+        },
+        {
+            imgSrc: "https://isabel-5b8d.kxcdn.com/pamutlabor/plab00011693/plab00011693-ferfi_polo-sportszurke-768x768.jpg",
+            title: "Póló 3",
+            description: "Leírás a ruhadarabról 3"
+        }
+    ];
+
+    const productImg = document.getElementById("product-img");
+    const productTitle = document.getElementById("product-title");
+    const productDescription = document.getElementById("product-description");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+
+    let currentIndex = 0;
+
+    function showProduct() {
+        const product = products[currentIndex];
+        productImg.src = product.imgSrc;
+        productTitle.innerText = product.title;
+        productDescription.innerText = product.description;
+    }
+
+    prevBtn.addEventListener("click", () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            showProduct();
+        }
+    });
+
+    nextBtn.addEventListener("click", () => {
+        if (currentIndex < products.length - 1) {
+            currentIndex++;
+            showProduct();
+        }
+    });
+
+    showProduct();
+
+                </script>
+           
+</body>
+
+</html>
