@@ -27,350 +27,390 @@
 
     <div class="container" id="products">
         <label for="min-price">Minimum price:</label>
-<input type="number" id="min-price" name="min-price">
-<label for="max-price">Maximum price:</label>
-<input type="number" id="max-price" name="max-price">
-<button onclick="showFilteredProducts()">Filter</button>
-<div id="product-container"></div>
+        <input type="number" id="min-price" name="min-price">
+        <label for="max-price">Maximum price:</label>
+        <input type="number" id="max-price" name="max-price">
+        <button onclick="showFilteredProducts()">Filter by price</button>
+
+        <label for="color-filter">Filter by color:</label>
+        <input type="text" id="color" placeholder="Enter color">
+        <button onclick="showFilteredProducts()">Filter by color</button>
+        <div id="product-container"></div>
         <div class=" dropdown">
-        
-        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            fiú
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <div class="row">
-                <div class="col-4">
 
-                    <div class="card">
-                        <img id="product-img" src="" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 id="product-title" class="card-title"></h5>
-                            <p id="product-description" class="card-text"></p>
-                            <p id="product-cost" class="card-text"></p>
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                fiú
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div class="row">
+                    <div class="col-4">
+
+                        <div class="card">
+                            <img id="product-img" src="" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="product-title" class="card-title"></h5>
+                                <p id="product-color" class="card-text"></p>
+                                <p id="product-description" class="card-text"></p>
+                                <p id="product-cost" class="card-text"></p>
+                            </div>
+                            <div class="pagination">
+                                <!-- ez meggátolja hogy bezárodjon a menü ha a gombokra kattinttol -->
+                                <button id="prev-btn" class="prev-btn" onclick="event.stopPropagation();">Előző</button>
+                                <button id="next-btn" class="next-btn"
+                                    onclick="event.stopPropagation();">Következő</button>
+                            </div>
                         </div>
-                        <div class="pagination">
-                            <!-- ez meggátolja hogy bezárodjon a menü ha a gombokra kattinttol -->
-                            <button id="prev-btn" class="prev-btn" onclick="event.stopPropagation();">Előző</button>
-                            <button id="next-btn" class="next-btn" onclick="event.stopPropagation();">Következő</button>
+
+                    </div>
+                    <div class="col-4">
+
+                        <div class="card">
+                            <img id="product-img2" src="" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="product-title2" class="card-title"></h5>
+                                <p id="product-color2" class="card-text"></p>
+                                <p id="product-description2" class="card-text"></p>
+                                <p id="product-cost2" class="card-text"></p>
+                            </div>
+                            <div class="pagination">
+                                <button id="prev-btn2" class="prev-btn"
+                                    onclick="event.stopPropagation();">Előző</button>
+                                <button id="next-btn2" class="next-btn"
+                                    onclick="event.stopPropagation();">Következő</button>
+                            </div>
                         </div>
+
+                    </div>
+                    <div class="col-4">
+
+                        <div class="card">
+                            <img id="product-img3" src="" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="product-title3" class="card-title"></h5>
+                                <p id="product-color3" class="card-text"></p>
+                                <p id="product-description3" class="card-text"></p>
+                                <p id="product-cost3" class="card-text"></p>
+                            </div>
+                            <div class="pagination">
+                                <button id="prev-btn3" class="prev-btn"
+                                    onclick="event.stopPropagation();">Előző</button>
+                                <button id="next-btn3" class="next-btn"
+                                    onclick="event.stopPropagation();">Következő</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-4">
+
+                        <div class="card">
+                            <img id="product-img4" src="" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="product-title4" class="card-title"></h5>
+                                <p id="product-color4" class="card-text"></p>
+                                <p id="product-description4" class="card-text"></p>
+                                <p id="product-cost4" class="card-text"></p>
+                            </div>
+                            <div class="pagination">
+                                <button id="prev-btn4" class="prev-btn"
+                                    onclick="event.stopPropagation();">Előző</button>
+                                <button id="next-btn4" class="next-btn"
+                                    onclick="event.stopPropagation();">Következő</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-4">
+
+                        <div class="card">
+                            <img id="product-img5" src="" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="product-title5" class="card-title"></h5>
+                                <p id="product-color5" class="card-text"></p>
+                                <p id="product-description5" class="card-text"></p>
+                                <p id="product-cost5" class="card-text"></p>
+                            </div>
+                            <div class="pagination">
+                                <button id="prev-btn5" class="prev-btn"
+                                    onclick="event.stopPropagation();">Előző</button>
+                                <button id="next-btn5" class="next-btn"
+                                    onclick="event.stopPropagation();">Következő</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-4">
+
+                        <div class="card">
+                            <img id="product-img6" src="" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="product-title6" class="card-title"></h5>
+                                <p id="product-color6" class="card-text"></p>
+                                <p id="product-description6" class="card-text"></p>
+                                <p id="product-cost6" class="card-text"></p>
+                            </div>
+                            <div class="pagination">
+                                <button id="prev-btn6" class="prev-btn"
+                                    onclick="event.stopPropagation();">Előző</button>
+                                <button id="next-btn6" class="next-btn"
+                                    onclick="event.stopPropagation();">Következő</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-4">
+
+                        <div class="card">
+                            <img id="product-img7" src="" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="product-title7" class="card-title"></h5>
+                                <p id="product-color7" class="card-text"></p>
+                                <p id="product-description7" class="card-text"></p>
+                                <p id="product-cost7" class="card-text"></p>
+                            </div>
+                            <div class="pagination">
+                                <button id="prev-btn7" class="prev-btn"
+                                    onclick="event.stopPropagation();">Előző</button>
+                                <button id="next-btn7" class="next-btn"
+                                    onclick="event.stopPropagation();">Következő</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-4">
+
+                        <div class="card">
+                            <img id="product-img8" src="" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="product-title8" class="card-title"></h5>
+                                <p id="product-color8" class="card-text"></p>
+                                <p id="product-description8" class="card-text"></p>
+                                <p id="product-cost8" class="card-text"></p>
+                            </div>
+                            <div class="pagination">
+                                <button id="prev-btn8" class="prev-btn"
+                                    onclick="event.stopPropagation();">Előző</button>
+                                <button id="next-btn8" class="next-btn"
+                                    onclick="event.stopPropagation();">Következő</button>
+                            </div>
+                        </div>
+
                     </div>
 
-                </div>
-                <div class="col-4">
 
-                    <div class="card">
-                        <img id="product-img2" src="" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 id="product-title2" class="card-title"></h5>
-                            <p id="product-description2" class="card-text"></p>
-                            <p id="product-cost2" class="card-text"></p>
-                        </div>
-                        <div class="pagination">
-                            <button id="prev-btn2" class="prev-btn" onclick="event.stopPropagation();">Előző</button>
-                            <button id="next-btn2" class="next-btn"
-                                onclick="event.stopPropagation();">Következő</button>
-                        </div>
-                    </div>
 
                 </div>
-                <div class="col-4">
-
-                    <div class="card">
-                        <img id="product-img3" src="" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 id="product-title3" class="card-title"></h5>
-                            <p id="product-description3" class="card-text"></p>
-                            <p id="product-cost3" class="card-text"></p>
-                        </div>
-                        <div class="pagination">
-                            <button id="prev-btn3" class="prev-btn" onclick="event.stopPropagation();">Előző</button>
-                            <button id="next-btn3" class="next-btn"
-                                onclick="event.stopPropagation();">Következő</button>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-4">
-
-                    <div class="card">
-                        <img id="product-img4" src="" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 id="product-title4" class="card-title"></h5>
-                            <p id="product-description4" class="card-text"></p>
-                            <p id="product-cost4" class="card-text"></p>
-                        </div>
-                        <div class="pagination">
-                            <button id="prev-btn4" class="prev-btn" onclick="event.stopPropagation();">Előző</button>
-                            <button id="next-btn4" class="next-btn"
-                                onclick="event.stopPropagation();">Következő</button>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-4">
-
-                    <div class="card">
-                        <img id="product-img5" src="" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 id="product-title5" class="card-title"></h5>
-                            <p id="product-description5" class="card-text"></p>
-                            <p id="product-cost5" class="card-text"></p>
-                        </div>
-                        <div class="pagination">
-                            <button id="prev-btn5" class="prev-btn" onclick="event.stopPropagation();">Előző</button>
-                            <button id="next-btn5" class="next-btn"
-                                onclick="event.stopPropagation();">Következő</button>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-4">
-
-                    <div class="card">
-                        <img id="product-img6" src="" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 id="product-title6" class="card-title"></h5>
-                            <p id="product-description6" class="card-text"></p>
-                            <p id="product-cost6" class="card-text"></p>
-                        </div>
-                        <div class="pagination">
-                            <button id="prev-btn6" class="prev-btn" onclick="event.stopPropagation();">Előző</button>
-                            <button id="next-btn6" class="next-btn"
-                                onclick="event.stopPropagation();">Következő</button>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-4">
-
-                    <div class="card">
-                        <img id="product-img7" src="" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 id="product-title7" class="card-title"></h5>
-                            <p id="product-description7" class="card-text"></p>
-                            <p id="product-cost7" class="card-text"></p>
-                        </div>
-                        <div class="pagination">
-                            <button id="prev-btn7" class="prev-btn" onclick="event.stopPropagation();">Előző</button>
-                            <button id="next-btn7" class="next-btn"
-                                onclick="event.stopPropagation();">Következő</button>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-4">
-
-                    <div class="card">
-                        <img id="product-img8" src="" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 id="product-title8" class="card-title"></h5>
-                            <p id="product-description8" class="card-text"></p>
-                            <p id="product-cost8" class="card-text"></p>
-                        </div>
-                        <div class="pagination">
-                            <button id="prev-btn8" class="prev-btn" onclick="event.stopPropagation();">Előző</button>
-                            <button id="next-btn8" class="next-btn"
-                                onclick="event.stopPropagation();">Következő</button>
-                        </div>
-                    </div>
-
-                </div>
-
 
 
             </div>
 
 
+
         </div>
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                lány
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div class="row">
+                    <div class="col-4">
 
-
-
-    </div>
-    <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            lány
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <div class="row">
-                <div class="col-4">
-
-                    <div class="card">
-                        <img id="product-img9" src="" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 id="product-title9" class="card-title"></h5>
-                            <p id="product-description9" class="card-text"></p>
-                            <p id="product-cost9" class="card-text"></p>
-                        </div>
-                        <div class="pagination">
-                            <!-- ez meggátolja hogy bezárodjon a menü ha a gombokra kattinttol -->
-                            <button id="prev-btn9" class="prev-btn" onclick="event.stopPropagation();">Előző</button>
-                            <button id="next-btn9" class="next-btn"
-                                onclick="event.stopPropagation();">Következő</button>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-4">
-
-                    <div class="card">
-                        <img id="product-img10" src="" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 id="product-title10" class="card-title"></h5>
-                            <p id="product-description10" class="card-text"></p>
-                            <p id="product-cost10" class="card-text"></p>
-                        </div>
-                        <div class="pagination">
-                            <button id="prev-btn10" class="prev-btn" onclick="event.stopPropagation();">Előző</button>
-                            <button id="next-btn10" class="next-btn"
-                                onclick="event.stopPropagation();">Következő</button>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-4">
-
-                    <div class="card">
-                        <img id="product-img11" src="" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 id="product-title11" class="card-title"></h5>
-                            <p id="product-description11" class="card-text"></p>
-                            <p id="product-cost11" class="card-text"></p>
-                        </div>
-                        <div class="pagination">
-                            <button id="prev-btn11" class="prev-btn" onclick="event.stopPropagation();">Előző</button>
-                            <button id="next-btn11" class="next-btn"
-                                onclick="event.stopPropagation();">Következő</button>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-4">
-
-                    <div class="card">
-                        <img id="product-img12" src="" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 id="product-title12" class="card-title"></h5>
-                            <p id="product-description12" class="card-text"></p>
-                            <p id="product-cost12" class="card-text"></p>
-                        </div>
-                        <div class="pagination">
-                            <button id="prev-btn12" class="prev-btn" onclick="event.stopPropagation();">Előző</button>
-                            <button id="next-btn12" class="next-btn"
-                                onclick="event.stopPropagation();">Következő</button>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-4">
-
-                    <div class="card">
-                        <img id="product-img13" src="" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 id="product-title13" class="card-title"></h5>
-                            <p id="product-description13" class="card-text"></p>
-                            <p id="product-cost13" class="card-text"></p>
-                        </div>
-                        <div class="pagination">
-                            <button id="prev-btn13" class="prev-btn" onclick="event.stopPropagation();">Előző</button>
-                            <button id="next-btn13" class="next-btn"
-                                onclick="event.stopPropagation();">Következő</button>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-4">
-
-                    <div class="card">
-                        <img id="product-img14" src="" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 id="product-title14" class="card-title"></h5>
-                            <p id="product-description14" class="card-text"></p>
-                            <p id="product-cost14" class="card-text"></p>
-                        </div>
-                        <div class="pagination">
-                            <button id="prev-btn14" class="prev-btn" onclick="event.stopPropagation();">Előző</button>
-                            <button id="next-btn14" class="next-btn"
-                                onclick="event.stopPropagation();">Következő</button>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-4">
-                    <div class="card">
-                        <img id="product-img15" src="" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 id="product-title15" class="card-title"></h5>
-                            <p id="product-description15" class="card-text"></p>
-                            <p id="product-cost15" class="card-text"></p>
-                        </div>
-                        <div class="pagination">
-                            <button id="prev-btn15" class="prev-btn" onclick="event.stopPropagation();">Előző</button>
-                            <button id="next-btn15" class="next-btn"
-                                onclick="event.stopPropagation();">Következő</button>
+                        <div class="card">
+                            <img id="product-img9" src="" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="product-title9" class="card-title"></h5>
+                                <p id="product-color9" class="card-text"></p>
+                                <p id="product-description9" class="card-text"></p>
+                                <p id="product-cost9" class="card-text"></p>
+                            </div>
+                            <div class="pagination">
+                                <!-- ez meggátolja hogy bezárodjon a menü ha a gombokra kattinttol -->
+                                <button id="prev-btn9" class="prev-btn"
+                                    onclick="event.stopPropagation();">Előző</button>
+                                <button id="next-btn9" class="next-btn"
+                                    onclick="event.stopPropagation();">Következő</button>
+                            </div>
                         </div>
 
                     </div>
-                </div>
+                    <div class="col-4">
 
-                <div class="col-4">
-                    <div class="card">
-                        <img id="product-img16" src="" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 id="product-title16" class="card-title"></h5>
-                            <p id="product-description16" class="card-text"></p>
-                            <p id="product-cost16" class="card-text"></p>
-                        </div>
-                        <div class="pagination">
-                            <button id="prev-btn16" class="prev-btn" onclick="event.stopPropagation();">Előző</button>
-                            <button id="next-btn16" class="next-btn"
-                                onclick="event.stopPropagation();">Következő</button>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="col-4">
-                    <div class="card">
-                        <img id="product-img17" src="" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 id="product-title17" class="card-title"></h5>
-                            <p id="product-description17" class="card-text"></p>
-                            <p id="product-cost17" class="card-text"></p>
-                        </div>
-                        <div class="pagination">
-                            <button id="prev-btn17" class="prev-btn" onclick="event.stopPropagation();">Előző</button>
-                            <button id="next-btn17" class="next-btn"
-                                onclick="event.stopPropagation();">Következő</button>
+                        <div class="card">
+                            <img id="product-img10" src="" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="product-title10" class="card-title"></h5>
+                                <p id="product-color10" class="card-text"></p>
+                                <p id="product-description10" class="card-text"></p>
+                                <p id="product-cost10" class="card-text"></p>
+                            </div>
+                            <div class="pagination">
+                                <button id="prev-btn10" class="prev-btn"
+                                    onclick="event.stopPropagation();">Előző</button>
+                                <button id="next-btn10" class="next-btn"
+                                    onclick="event.stopPropagation();">Következő</button>
+                            </div>
                         </div>
 
                     </div>
-                </div>
+                    <div class="col-4">
 
-                <div class="col-4">
-                    <div class="card">
-                        <img id="product-img18" src="" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 id="product-title18" class="card-title"></h5>
-                            <p id="product-description18" class="card-text"></p>
-                            <p id="product-cost18" class="card-text"></p>
-                        </div>
-                        <div class="pagination">
-                            <button id="prev-btn18" class="prev-btn" onclick="event.stopPropagation();">Előző</button>
-                            <button id="next-btn18" class="next-btn"
-                                onclick="event.stopPropagation();">Következő</button>
+                        <div class="card">
+                            <img id="product-img11" src="" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="product-title11" class="card-title"></h5>
+                                <p id="product-color11" class="card-text"></p>
+                                <p id="product-description11" class="card-text"></p>
+                                <p id="product-cost11" class="card-text"></p>
+                            </div>
+                            <div class="pagination">
+                                <button id="prev-btn11" class="prev-btn"
+                                    onclick="event.stopPropagation();">Előző</button>
+                                <button id="next-btn11" class="next-btn"
+                                    onclick="event.stopPropagation();">Következő</button>
+                            </div>
                         </div>
 
                     </div>
+                    <div class="col-4">
+
+                        <div class="card">
+                            <img id="product-img12" src="" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="product-title12" class="card-title"></h5>
+                                <p id="product-color12" class="card-text"></p>
+                                <p id="product-description12" class="card-text"></p>
+                                <p id="product-cost12" class="card-text"></p>
+                            </div>
+                            <div class="pagination">
+                                <button id="prev-btn12" class="prev-btn"
+                                    onclick="event.stopPropagation();">Előző</button>
+                                <button id="next-btn12" class="next-btn"
+                                    onclick="event.stopPropagation();">Következő</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-4">
+
+                        <div class="card">
+                            <img id="product-img13" src="" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="product-title13" class="card-title"></h5>
+                                <p id="product-color13" class="card-text"></p>
+                                <p id="product-description13" class="card-text"></p>
+                                <p id="product-cost13" class="card-text"></p>
+                            </div>
+                            <div class="pagination">
+                                <button id="prev-btn13" class="prev-btn"
+                                    onclick="event.stopPropagation();">Előző</button>
+                                <button id="next-btn13" class="next-btn"
+                                    onclick="event.stopPropagation();">Következő</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-4">
+
+                        <div class="card">
+                            <img id="product-img14" src="" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="product-title14" class="card-title"></h5>
+                                <p id="product-color14" class="card-text"></p>
+                                <p id="product-description14" class="card-text"></p>
+                                <p id="product-cost14" class="card-text"></p>
+                            </div>
+                            <div class="pagination">
+                                <button id="prev-btn14" class="prev-btn"
+                                    onclick="event.stopPropagation();">Előző</button>
+                                <button id="next-btn14" class="next-btn"
+                                    onclick="event.stopPropagation();">Következő</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img id="product-img15" src="" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="product-title15" class="card-title"></h5>
+                                <p id="product-color15" class="card-text"></p>
+                                <p id="product-description15" class="card-text"></p>
+                                <p id="product-cost15" class="card-text"></p>
+                            </div>
+                            <div class="pagination">
+                                <button id="prev-btn15" class="prev-btn"
+                                    onclick="event.stopPropagation();">Előző</button>
+                                <button id="next-btn15" class="next-btn"
+                                    onclick="event.stopPropagation();">Következő</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="card">
+                            <img id="product-img16" src="" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="product-title16" class="card-title"></h5>
+                                <p id="product-color16" class="card-text"></p>
+                                <p id="product-description16" class="card-text"></p>
+                                <p id="product-cost16" class="card-text"></p>
+                            </div>
+                            <div class="pagination">
+                                <button id="prev-btn16" class="prev-btn"
+                                    onclick="event.stopPropagation();">Előző</button>
+                                <button id="next-btn16" class="next-btn"
+                                    onclick="event.stopPropagation();">Következő</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="card">
+                            <img id="product-img17" src="" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="product-title17" class="card-title"></h5>
+                                <p id="product-color17" class="card-text"></p>
+                                <p id="product-description17" class="card-text"></p>
+                                <p id="product-cost17" class="card-text"></p>
+                            </div>
+                            <div class="pagination">
+                                <button id="prev-btn17" class="prev-btn"
+                                    onclick="event.stopPropagation();">Előző</button>
+                                <button id="next-btn17" class="next-btn"
+                                    onclick="event.stopPropagation();">Következő</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="card">
+                            <img id="product-img18" src="" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 id="product-title18" class="card-title"></h5>
+                                <p id="product-color18" class="card-text"></p>
+                                <p id="product-description18" class="card-text"></p>
+                                <p id="product-cost18" class="card-text"></p>
+                            </div>
+                            <div class="pagination">
+                                <button id="prev-btn18" class="prev-btn"
+                                    onclick="event.stopPropagation();">Előző</button>
+                                <button id="next-btn18" class="next-btn"
+                                    onclick="event.stopPropagation();">Következő</button>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
+
             </div>
 
+
+
         </div>
-
-
-
-    </div>
     </div>
     <div id="produc"></div>
     </div>
@@ -384,40 +424,46 @@
         //a fő tömb amiben a mellék tömbök vannak
         var clothes = {
 
-             polo : [
+            polo: [
                 {
                     imgSrc: "https://polomania.hu/images/items/tn3/mobile/3/6/f/36f8fe51.jpg",
                     title: "Póló 1",
+                    color: "Zöld",
                     description: "Leírás a ruhadarabról 1",
                     cost: 1000
                 },
                 {
                     imgSrc: "https://poloido.hu/wp-content/uploads/faszfej-polo-feher.png",
                     title: "Póló 2",
+                    color: "Piros",
                     description: "Leírás a ruhadarabról 2",
                     cost: 3122
                 },
                 {
                     imgSrc: "https://isabel-5b8d.kxcdn.com/pamutlabor/plab00011693/plab00011693-ferfi_polo-sportszurke-768x768.jpg",
                     title: "Póló 3",
+                    color: "Kék",
                     description: "Leírás a ruhadarabról 3",
                     cost: 2343
                 },
                 {
                     imgSrc: "https://polomania.hu/images/items/tn3/mobile/3/6/f/36f8fe51.jpg",
                     title: "PólóL 1",
+                    color: "Citrom",
                     description: "Leírás a ruhadarabról 1",
                     cost: 1000
                 },
                 {
                     imgSrc: "https://poloido.hu/wp-content/uploads/faszfej-polo-feher.png",
                     title: "PólóL 2",
+                    color: "Rózsaszín",
                     description: "Leírás a ruhadarabról 2",
                     cost: 3122
                 },
                 {
                     imgSrc: "https://isabel-5b8d.kxcdn.com/pamutlabor/plab00011693/plab00011693-ferfi_polo-sportszurke-768x768.jpg",
                     title: "PólóL 3",
+                    color: "Narancs",
                     description: "Leírás a ruhadarabról 3",
                     cost: 2343
                 }
@@ -425,309 +471,357 @@
 
 
 
-            pullover : [
+            pullover: [
                 {
                     imgSrc: "https://ajandekozd.hu/wp-content/uploads/2017/11/fol-kapucnis-pulover-ferfi-fekete.jpg",
                     title: "Pulóver",
+                    color: "Barna",
                     description: "Leírás a ruhadarabról 1",
                     cost: 10410
                 },
                 {
                     imgSrc: "https://eu-cdn.portya.net/inc/uploads/2016/05/portya_ferfi_kapucnis_pulover_mohzold_oldalt-435x435.jpg",
                     title: "Pulóver 2",
+                    color: "Fehér",
                     description: "Leírás a ruhadarabról 2",
                     cost: 2331
                 },
                 {
                     imgSrc: "https://polomolo.hu/wp-content/uploads/2021/10/ferfi-kapucnis-pulover-military-zold-gi185-600x600.jpg",
                     title: "Púlóver 3",
+                    color: "Fekete",
                     description: "Leírás a ruhadarabról 3",
                     cost: 5000
                 },
                 {
                     imgSrc: "https://ajandekozd.hu/wp-content/uploads/2017/11/fol-kapucnis-pulover-ferfi-fekete.jpg",
                     title: "Pulóver L",
+                    color: "Szürke",
                     description: "Leírás a ruhadarabról 1",
                     cost: 10410
                 },
                 {
                     imgSrc: "https://eu-cdn.portya.net/inc/uploads/2016/05/portya_ferfi_kapucnis_pulover_mohzold_oldalt-435x435.jpg",
                     title: "Pulóver 2 L",
+                    color: "Kék",
                     description: "Leírás a ruhadarabról 2",
                     cost: 2331
                 },
                 {
                     imgSrc: "https://polomolo.hu/wp-content/uploads/2021/10/ferfi-kapucnis-pulover-military-zold-gi185-600x600.jpg",
                     title: "Púlóver 3 L",
+                    color: "Cián",
                     description: "Leírás a ruhadarabról 3",
                     cost: 5000
                 }
             ],
 
-             nadrag : [
+            nadrag: [
                 {
                     imgSrc: "https://contents.mediadecathlon.com/p1741277/k$3ca4434b0e2725e9b874436f3b3f004f/sq/ferfi-nadrag.jpg?format=auto&f=800x0",
                     title: "nadrág 1",
+                    color: "Zöld",
                     description: "Leírás a ruhadarabról 1",
                     cost: 300
                 },
                 {
                     imgSrc: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEBUTExIWExMWFRIVGBgXFhAYGBsTGBUWGBgWFxUYHSggGBolGxUVIjEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGxAQFS8dHR8rKy0tLSstLS0rLS0rLS0tLS0tLS0tLS0rNy0tLS0tLS0tKystKystLS0tKy0rLSsrLf/AABEIAOEA4QMBIgACEQEDEQH/xAAbAAEAAwEBAQEAAAAAAAAAAAAABQYHBAMCAf/EAEQQAAIBAgIGBwQGCAUFAQAAAAABAgMRBCEGEjFBUZEFE2FxgaGxInLB0QcyQoKi8BQjUmKSssLhJDM0c9IlQ0RjwxX/xAAYAQEBAQEBAAAAAAAAAAAAAAAAAwIBBP/EACERAQADAAICAgMBAAAAAAAAAAABAjEDERIhMkETQlEi/9oADAMBAAIRAxEAPwDcQAAAAAAAAAAAPHF4iNOEpyeSTe7PsV97A9gZ5jNPMQnlh40l+/rydu9NI5ZfSDiNidG/uy/5GPOHfGWmgylaf4tfapvO2cMvJoR+krFXzhRfZq1F4/W7x5wdNWBmcfpAxjs44eDW22pVWXva1kdtDSzpCpZwoUIq+2Tk7pOztaV75cB5weMr+DP8ZpliKTXXVKFPJNxjRxE79qkpZci8dH4nrKUZ2tdZpO6v2M7FokmOnQADTgAAAAAAAAAAAAAAAAAAAAAAAAVrTqdqVBccRFcqVV/AspD6V06bwzc7XjJSg3unmrrt1XJdzZy2S7Gsu6WxNT9IlqycbKKvdpKNk3lsect/Ah6uMnKck2pRShtUc7yUc8sydq4FV26ilqqSg7NPhvzyy1cu8isb0VOFRy1bx1Vmr5Wd7249his166amJcONquLvHVV3b2YwjuTzss3t5nVUxM1Gyk1s2NrPc8uPwOLBYWtiZytDVgnZXaT1o3z8brkiah0FU9nrGlG1m47Vw2nfKsOdSj6cm9ueb28d68V6Fj0OrPUqQ2qNV292UIT5tybfa2flPoSjD6zk9mbfs3WzOOw7MLShRclFW1pRds3wi7crk73i0dQ1WJiUdprTyi88012ZWfPNmkaHSvgqL406bz7acH8StRTeaafNepP6M4rVXVNW2uOza82u3jzO0vkFq/awgAsmAAAAAAAAAAAAAAAAAAAAAAAAFO0yr61RU7pqCu1+8/7W5lwbM6x+I6ypKb+1LWXdf2VyS5EuWfXTVY9vCFNJdxz1pH3ObOTEVO1kVH5go2UtVbHe357jtwuMT9mWXoyMwMs3Z5+J1To53+QkSX6M1nB5P7LzR5/o+VtVx7N3hwPPD4hxyls4khCaaydzjrzoQaW1tcHnbuZ3YerqtSW5pnPSTSSt2ZHtF9gF3TvmfpxdD1L0Iditydvgdp64nuEAAHQAAAAAAAAAAAAAAAAAAAAAR/T9fUw83va1f4nb0bM/rVbFp0wxf1aS99+aXx8itKa3/nwPPyT3KlY9I6rUqy+wku1nJU1ltT5pkrXrw+1Cr4U528iPxGMo/wDtj305/IzDThhiNRtnTQ6QvtVt+8jcZiobnl3Nep2U6CaT6xQvxTtz2HXE3Qq3XFcD2hStnFkTRwk45qesuKV142zJTCybWdr979NpmXXdRqvedMWclO57bMzLq3dBr9RH738zO8rPQfTUVB01Cc5RbdopN6vbG91n6llR6qT3CNo9v0AG3AAAAAAAAAAAAAAAAAAAAABUNL8LqT65y9mWWe5xXpZFMoSVabqODlTj7MLpq90nKdnu2Jd3aaFprC+Hi+FSPnGS+JSVLP4HnvHUqVx7QSWzLxfoc+NhdZxT75P0OiMlxPDEvIm0ovT9fq5fVsnwbJTRDpDrqMsmnCTjdZpqyauvHyI7SiKa2bzs0IUlRldZa7Sfck3/ADLmV/Vn7WCNOO9eMXKPNXPnEVJU7TjKU1F3s2neO9duV9p9zl2Jn1CV1syMNJvD1lKOsndNXueusiJwNCC9pQSctrW9rL5kipmXUxo3FvEX3akr81v8S2Fb0QoZ1J7nqx8Vdt/iRZD0ccf5StoACjIAAAAAAAAAAAAAAAAAAAAAh9LIXwk+xwf4l8zPZbTSdIo3wtX3W+WfwMzlKz2EeTW646YHjiHkekWss/Zex/M8MU90snx3P5Em1P0lLTo10a49Dxq2/wDJm7/uShGH88UVjpyN2u/8s2DA9E6nQyotZqhrtb9f/Mt33K1juGJ1R2xRlmfN8j5p7SbSUwuTa45r0fwOu5wUJZp22PyZ2t9j/PcZdW3Q9rqZZ3/WNPserHL4+JOkJojhtTD3vfrJznstbZG34fMmz1VyEp0ABpwAAAAAAAAAAAAAAAAAAAAAcPTb/wANV/25+hmVWGT7DTOnf9NV9yXoZrrJS4EeTW6vOlU1ducHtXB8e4/cSrey81uf9z7lBXtn3HjUWqtWWcdz4dj7CTaAq4F1q8KMfrTmoq/bl5fM3ulTtFR2pJLkrGK9FUNbH4Za2o+ug0+6V7eNvM20vx4nZj+Po9XVqQeShOa8FJpc1Y4VN3u8uzsJzS6jbG1VsV4y8XCL9bkNGGfHvSJzrcJPAq67zoeXo+9bHyOTAys1/Y76rya5mJdaF0VT1aFNbPYhzsr+Z1HzS+qrcEfR64RAAAAAAAAAAAAAAAAAAAAAAAAcXTcb4ar/ALc/RmX1tviap0nG9ColtdOa/CzLqqdnkmrXtv8ABkeTW6vacbpNbbHjXvY/MK1KNt6PKrK0ZJ7r8STby0dh/wBQw3vp9mxt/E2UxvRpX6Rw64VMvCLyNkPRx4nZQPpBpWxEJW+tTSv2qT+DRVZqyRefpHp/q6UrZqco37HG9vwlDrPNE761GO6i3kSWtfV4vIjKC2EjSSVr5Waa5k5aaZThZJcElyPoA9aIAAAAAAAAAAAAAAAAAAAAAAAD8aMvrU9SrKPCUocm18DUTNtJKeriavvt80n8SXLHpuqMqU3Cpfcz4xe134M63O8bbfE48c/ZbfBkW3h0HSm+k8Pq7esjL7qu5/hUjZzL9Co36Rh2QqS7srfE1A9HHidtVzT2mng7/s1KbXZm4+kmZvUNM04X+Cm+EqT8Otj8zNa+wxya7XHZhNxI9Vnfh6kPgqlmr7L8CZ61WyJS20ijO8U+KT5o+zj6HnfD0m/2I+Ssdh6oxEAB0AAAAAAAAAAAAAAAAAAAAAAoOmUP8RLtjB+VvgX4pGnGVePbTXlKRPkxquqvRduw+ekEnB57mvIKm093gfcaV4tPP87yKiU+jSKlipzb9uNJxt99XflHmaUY3o9iZYfH0Zp+zUkoS4e09V37rp+BshemJ2R+kGH6zC1oLa6c7e8k2vNIyaubPUV012Mxeo8rbbZGeR2r7wrzJKlPIi8K7PY/E61XumrWyJS20rRqpfC0/vLlJkoQeh1S+GtwnJc0n8ScPRXISnQAGnAAAAAAAAAAAAAAAAAAAAAAKJp3iF+kQjbZBP8Aik/kXspun2Cd6dZe4/Nx/q8jF8arqsSPumm00jyhW1lntR+0m08jzqOenhJTr0Yra69PP7/pmbEZd0ZO2LovjWprnqr895qJbixOz8aMWxWE6upOF84VKkf4ZNfA2oyzTLC9XjKnCdpr7yz/ABKR3kwqjsHiofVms+N3YkZwildZrcV6conTgMbGLtKXs+jIzDbRNB6ns1Y8JQfNNf0lnKjoHL2q/dR/+hbi/H8WLaAA2yAAAAAAAAAAAAAAAAAAAAABF6TJfolW/wCz53RKEVpT/o6vu/FHJx2GcKip7Hqy39p8OjOPBnhk3ZtrtW1PieOJqVabtN3jul8zzKpLoyf6+k39mtRlymvka0Y1gqyjUUtycH4J/wBjZSvGxYKZ9ImFerSrJXUW4S7nnHwunzLmVT6SMc6eFjBbalSC+7F6z81HmbtjMao9OhRntVme6w8FsS5I4ZRy1o7N/YdeHneF9555VW7QL69bup+Tl8y4lK0Bf62r7sfVl1L8fxTtoADbIAAAAAAAAAAAAAAAAAAAAAHB0/h3UwtWKzbhK3eldeaO8AYiqzvbbyuueT8T6o6001GrfjCpBcsvVXJLHUoznUaST152t7zt4H5LDJpNqz4rJrxPLKqMp0ZU3mnqNJJ7bbcm/HabVhvqRv8Asx9DOOgpxeJpRktaMpJO+92dr8c7GlleP+s2DPfpLqOValBfZg5eMpW/oNCM++kfAdZXptrLq833Sll+I1fGa6qFHFxpv2pxSeVnKJ0YfpClulG3Y0eFPoGks1HO++/M9f8A8mnf6q9CHpT2u2gU4upUaafsR9S6FL+j7olQc6yWqmurXB5qTduyy8y6F6fFO2gANuAAAAAAAAAAAAAAAAAAAAAAAAKRiND60buE41N+d4v4rzIx6N4tv/If8dP/AJGlAn+OGvKVV6A0VdOpGrVaco3cYLNKTVrye9q7yRagDcREY5M9hA6Y9Hyq0E4JucJJpJXbTyaS5P7pPATHcdOQzXDdCYqX/Zku+0fVo9Xo9ir/AOU/4qfzNFBj8UNecufo/CqlShTX2Ul3ve/F3OgAoyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/9k=",
                     title: "nadrág 2",
+                    color: "Barna",
                     description: "Leírás a ruhadarabról 2",
                     cost: 203
                 },
                 {
                     imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVwyHDr4QzC72y8Op_kHMUQX0089oZm54yBQ&usqp=CAU",
                     title: "nadrág 3",
+                    color: "Piros",
                     description: "Leírás a ruhadarabról 3",
                     cost: 420
                 },
                 {
                     imgSrc: "https://contents.mediadecathlon.com/p1741277/k$3ca4434b0e2725e9b874436f3b3f004f/sq/ferfi-nadrag.jpg?format=auto&f=800x0",
                     title: "nadrágL 1",
+                    color: "Fekete",
                     description: "Leírás a ruhadarabról 1",
                     cost: 300
                 },
                 {
                     imgSrc: "data:image/jpeg;base64,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",
                     title: "nadrágL 2",
+                    color: "Szürke",
                     description: "Leírás a ruhadarabról 2",
                     cost: 203
                 },
                 {
                     imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVwyHDr4QzC72y8Op_kHMUQX0089oZm54yBQ&usqp=CAU",
                     title: "nadrágL 3",
+                    color: "Kék",
                     description: "Leírás a ruhadarabról 3",
                     cost: 420
                 }
             ],
-             kabat : [
+            kabat: [
                 {
                     imgSrc: "https://ajandekozd.hu/wp-content/uploads/2017/11/fol-kapucnis-pulover-ferfi-fekete.jpg",
                     title: "Kabát",
+                    color: "Kék",
                     description: "Leírás a ruhadarabról 1",
                     cost: 10410
                 },
                 {
                     imgSrc: "https://eu-cdn.portya.net/inc/uploads/2016/05/portya_ferfi_kapucnis_pulover_mohzold_oldalt-435x435.jpg",
                     title: "Kabát 2",
+                    color: "Piros",
                     description: "Leírás a ruhadarabról 2",
                     cost: 2331
                 },
                 {
                     imgSrc: "https://polomolo.hu/wp-content/uploads/2021/10/ferfi-kapucnis-pulover-military-zold-gi185-600x600.jpg",
                     title: "Kabát 3",
+                    color: "Bordó",
                     description: "Leírás a ruhadarabról 3",
                     cost: 5000
                 }, {
                     imgSrc: "https://ajandekozd.hu/wp-content/uploads/2017/11/fol-kapucnis-pulover-ferfi-fekete.jpg",
                     title: "KabátL",
+                    color: "Kék",
                     description: "Leírás a ruhadarabról 1",
                     cost: 10410
                 },
                 {
                     imgSrc: "https://eu-cdn.portya.net/inc/uploads/2016/05/portya_ferfi_kapucnis_pulover_mohzold_oldalt-435x435.jpg",
                     title: "KabátL 2",
+                    color: "Barna",
                     description: "Leírás a ruhadarabról 2",
                     cost: 2331
                 },
                 {
                     imgSrc: "https://polomolo.hu/wp-content/uploads/2021/10/ferfi-kapucnis-pulover-military-zold-gi185-600x600.jpg",
                     title: "KabátL 3",
+                    color: "Citrom",
                     description: "Leírás a ruhadarabról 3",
                     cost: 5000
                 }
             ],
 
-            rovidNadrag : [
+            rovidNadrag: [
                 {
                     imgSrc: "https://ajandekozd.hu/wp-content/uploads/2017/11/fol-kapucnis-pulover-ferfi-fekete.jpg",
                     title: "Rövid nadrág",
+                    color: "Lila",
                     description: "Leírás a ruhadarabról 1",
                     cost: 10410
                 },
                 {
                     imgSrc: "https://eu-cdn.portya.net/inc/uploads/2016/05/portya_ferfi_kapucnis_pulover_mohzold_oldalt-435x435.jpg",
                     title: "Rövid nadrág 2",
+                    color: "Narancs",
                     description: "Leírás a ruhadarabról 2",
                     cost: 2331
                 },
                 {
                     imgSrc: "https://polomolo.hu/wp-content/uploads/2021/10/ferfi-kapucnis-pulover-military-zold-gi185-600x600.jpg",
                     title: "Rövid nadrág 3",
+                    color: "Fekete",
                     description: "Leírás a ruhadarabról 3",
                     cost: 5000
                 }, {
                     imgSrc: "https://ajandekozd.hu/wp-content/uploads/2017/11/fol-kapucnis-pulover-ferfi-fekete.jpg",
                     title: "Rövid nadrágL",
+                    color: "Szürke",
                     description: "Leírás a ruhadarabról 1",
                     cost: 10410
                 },
                 {
                     imgSrc: "https://eu-cdn.portya.net/inc/uploads/2016/05/portya_ferfi_kapucnis_pulover_mohzold_oldalt-435x435.jpg",
                     title: "Rövid nadrágL 2",
+                    color: "Barna",
                     description: "Leírás a ruhadarabról 2",
                     cost: 2331
                 },
                 {
                     imgSrc: "https://polomolo.hu/wp-content/uploads/2021/10/ferfi-kapucnis-pulover-military-zold-gi185-600x600.jpg",
                     title: "Rövid nadrágL 3",
+                    color: "Kék",
                     description: "Leírás a ruhadarabról 3",
                     cost: 5000
                 }
             ],
-             zokni : [
+            zokni: [
                 {
                     imgSrc: "https://ajandekozd.hu/wp-content/uploads/2017/11/fol-kapucnis-pulover-ferfi-fekete.jpg",
                     title: "zokni",
+                    color: "Piros",
                     description: "Leírás a ruhadarabról 1",
                     cost: 10410
                 },
                 {
                     imgSrc: "https://eu-cdn.portya.net/inc/uploads/2016/05/portya_ferfi_kapucnis_pulover_mohzold_oldalt-435x435.jpg",
                     title: "zokni 2",
+                    color: "Lila",
                     description: "Leírás a ruhadarabról 2",
                     cost: 2331
                 },
                 {
                     imgSrc: "https://polomolo.hu/wp-content/uploads/2021/10/ferfi-kapucnis-pulover-military-zold-gi185-600x600.jpg",
                     title: "zokni 3",
+                    color: "Barna",
                     description: "Leírás a ruhadarabról 3",
                     cost: 5000
                 },
                 {
                     imgSrc: "https://ajandekozd.hu/wp-content/uploads/2017/11/fol-kapucnis-pulover-ferfi-fekete.jpg",
                     title: "zokniL",
+                    color: "Zöld",
                     description: "Leírás a ruhadarabról 1",
                     cost: 10410
                 },
                 {
                     imgSrc: "https://eu-cdn.portya.net/inc/uploads/2016/05/portya_ferfi_kapucnis_pulover_mohzold_oldalt-435x435.jpg",
                     title: "zokniL 2",
+                    color: "Rózsaszín",
                     description: "Leírás a ruhadarabról 2",
                     cost: 2331
                 },
                 {
                     imgSrc: "https://polomolo.hu/wp-content/uploads/2021/10/ferfi-kapucnis-pulover-military-zold-gi185-600x600.jpg",
                     title: "zokniL 3",
+                    color: "Zöld",
                     description: "Leírás a ruhadarabról 3",
                     cost: 5000
                 }
 
             ],
 
-             alsónemű : [
+            alsónemű: [
                 {
                     imgSrc: "https://ajandekozd.hu/wp-content/uploads/2017/11/fol-kapucnis-pulover-ferfi-fekete.jpg",
                     title: "alsó 1",
+                    color: "Zöld",
                     description: "Leírás a ruhadarabról 1",
                     cost: 1324
                 },
                 {
                     imgSrc: "https://eu-cdn.portya.net/inc/uploads/2016/05/portya_ferfi_kapucnis_pulover_mohzold_oldalt-435x435.jpg",
                     title: "asló 2",
+                    color: "Zöld",
                     description: "Leírás a ruhadarabról 2",
                     cost: 2331
                 },
                 {
                     imgSrc: "https://polomolo.hu/wp-content/uploads/2021/10/ferfi-kapucnis-pulover-military-zold-gi185-600x600.jpg",
                     title: "alsó 3",
+                    color: "Zöld",
                     description: "Leírás a ruhadarabról 3",
                     cost: 5000
                 },
                 {
                     imgSrc: "https://ajandekozd.hu/wp-content/uploads/2017/11/fol-kapucnis-pulover-ferfi-fekete.jpg",
                     title: "alsóL 1",
+                    color: "Zöld",
                     description: "Leírás a ruhadarabról 1",
                     cost: 1324
                 },
                 {
                     imgSrc: "https://eu-cdn.portya.net/inc/uploads/2016/05/portya_ferfi_kapucnis_pulover_mohzold_oldalt-435x435.jpg",
                     title: "aslóL 2",
+                    color: "Zöld",
                     description: "Leírás a ruhadarabról 2",
                     cost: 2331
                 },
                 {
                     imgSrc: "https://polomolo.hu/wp-content/uploads/2021/10/ferfi-kapucnis-pulover-military-zold-gi185-600x600.jpg",
                     title: "alsóL 3",
+                    color: "Zöld",
                     description: "Leírás a ruhadarabról 3",
                     cost: 5000
                 }
             ],
-         fürdőruha : [
+            fürdőruha: [
                 {
                     imgSrc: "https://ajandekozd.hu/wp-content/uploads/2017/11/fol-kapucnis-pulover-ferfi-fekete.jpg",
                     title: "fürdő 1",
+                    color: "Zöld",
                     description: "Leírás a ruhadarabról 1",
                     cost: 1324
                 },
                 {
                     imgSrc: "https://eu-cdn.portya.net/inc/uploads/2016/05/portya_ferfi_kapucnis_pulover_mohzold_oldalt-435x435.jpg",
                     title: "fürdő 2",
+                    color: "Zöld",
                     description: "Leírás a ruhadarabról 2",
                     cost: 2331
                 },
                 {
                     imgSrc: "https://polomolo.hu/wp-content/uploads/2021/10/ferfi-kapucnis-pulover-military-zold-gi185-600x600.jpg",
                     title: "fürdő 3",
+                    color: "Zöld",
                     description: "Leírás a ruhadarabról 3",
                     cost: 5000
                 }, {
                     imgSrc: "https://ajandekozd.hu/wp-content/uploads/2017/11/fol-kapucnis-pulover-ferfi-fekete.jpg",
                     title: "fürdőL 1",
+                    color: "Zöld",
                     description: "Leírás a ruhadarabról 1",
                     cost: 1324
                 },
                 {
                     imgSrc: "https://eu-cdn.portya.net/inc/uploads/2016/05/portya_ferfi_kapucnis_pulover_mohzold_oldalt-435x435.jpg",
                     title: "fürdőL 2",
+                    color: "Zöld",
                     description: "Leírás a ruhadarabról 2",
                     cost: 2331
                 },
                 {
                     imgSrc: "https://polomolo.hu/wp-content/uploads/2021/10/ferfi-kapucnis-pulover-military-zold-gi185-600x600.jpg",
                     title: "fürdőL 3",
+                    color: "Zöld",
                     description: "Leírás a ruhadarabról 3",
                     cost: 5000
                 }
             ],
-             ruha : [
+            ruha: [
                 {
                     imgSrc: "https://ajandekozd.hu/wp-content/uploads/2017/11/fol-kapucnis-pulover-ferfi-fekete.jpg",
                     title: "ruha 1",
+                    color: "Zöld",
                     description: "Leírás a ruhadarabról 1",
                     cost: 1324
                 },
                 {
                     imgSrc: "https://eu-cdn.portya.net/inc/uploads/2016/05/portya_ferfi_kapucnis_pulover_mohzold_oldalt-435x435.jpg",
                     title: "ruha 2",
+                    color: "Zöld",
                     description: "Leírás a ruhadarabról 2",
                     cost: 2331
                 },
                 {
                     imgSrc: "https://polomolo.hu/wp-content/uploads/2021/10/ferfi-kapucnis-pulover-military-zold-gi185-600x600.jpg",
                     title: "ruha 3",
+                    color: "Zöld",
                     description: "Leírás a ruhadarabról 3",
                     cost: 5000
                 }
             ],
-             szoknya: [
+            szoknya: [
                 {
                     imgSrc: "https://ajandekozd.hu/wp-content/uploads/2017/11/fol-kapucnis-pulover-ferfi-fekete.jpg",
                     title: "szoknya 1",
+                    color: "Zöld",
                     description: "Leírás a ruhadarabról 1",
                     cost: 1324
                 },
                 {
                     imgSrc: "https://eu-cdn.portya.net/inc/uploads/2016/05/portya_ferfi_kapucnis_pulover_mohzold_oldalt-435x435.jpg",
                     title: "szoknya 2",
+                    color: "Zöld",
                     description: "Leírás a ruhadarabról 2",
                     cost: 2331
                 },
                 {
                     imgSrc: "https://polomolo.hu/wp-content/uploads/2021/10/ferfi-kapucnis-pulover-military-zold-gi185-600x600.jpg",
                     title: "szoknya 3",
+                    color: "Zöld",
                     description: "Leírás a ruhadarabról 3",
                     cost: 5000
                 }
@@ -741,6 +835,7 @@
         //a behelyetesítésre változók
         const productImg = document.getElementById("product-img");
         const productTitle = document.getElementById("product-title");
+        const productColor = document.getElementById("product-color");
         const productDescription = document.getElementById("product-description");
         const prevBtn = document.getElementById("prev-btn");
         const nextBtn = document.getElementById("next-btn");
@@ -749,6 +844,7 @@
 
         const productImg2 = document.getElementById("product-img2");
         const productTitle2 = document.getElementById("product-title2");
+        const productColor2 = document.getElementById("product-color2");
         const productDescription2 = document.getElementById("product-description2");
         const prevBtn2 = document.getElementById("prev-btn2");
         const nextBtn2 = document.getElementById("next-btn2");
@@ -757,6 +853,7 @@
 
         const productImg3 = document.getElementById("product-img3");
         const productTitle3 = document.getElementById("product-title3");
+        const productColor3 = document.getElementById("product-color3");
         const productDescription3 = document.getElementById("product-description3");
         const prevBtn3 = document.getElementById("prev-btn3");
         const nextBtn3 = document.getElementById("next-btn3");
@@ -765,6 +862,7 @@
 
         const productImg4 = document.getElementById("product-img4");
         const productTitle4 = document.getElementById("product-title4");
+        const productColor4 = document.getElementById("product-color4");
         const productDescription4 = document.getElementById("product-description4");
         const prevBtn4 = document.getElementById("prev-btn4");
         const nextBtn4 = document.getElementById("next-btn4");
@@ -773,6 +871,7 @@
 
         const productImg5 = document.getElementById("product-img5");
         const productTitle5 = document.getElementById("product-title5");
+        const productColor5 = document.getElementById("product-color5");
         const productDescription5 = document.getElementById("product-description5");
         const prevBtn5 = document.getElementById("prev-btn5");
         const nextBtn5 = document.getElementById("next-btn5");
@@ -781,6 +880,7 @@
 
         const productImg6 = document.getElementById("product-img6");
         const productTitle6 = document.getElementById("product-title6");
+        const productColor6 = document.getElementById("product-color6");
         const productDescription6 = document.getElementById("product-description6");
         const prevBtn6 = document.getElementById("prev-btn6");
         const nextBtn6 = document.getElementById("next-btn6");
@@ -789,6 +889,7 @@
 
         const productImg7 = document.getElementById("product-img7");
         const productTitle7 = document.getElementById("product-title7");
+        const productColor7 = document.getElementById("product-color7");
         const productDescription7 = document.getElementById("product-description7");
         const prevBtn7 = document.getElementById("prev-btn7");
         const nextBtn7 = document.getElementById("next-btn7");
@@ -797,6 +898,7 @@
 
         const productImg8 = document.getElementById("product-img8");
         const productTitle8 = document.getElementById("product-title8");
+        const productColor8 = document.getElementById("product-color8");
         const productDescription8 = document.getElementById("product-description8");
         const prevBtn8 = document.getElementById("prev-btn8");
         const nextBtn8 = document.getElementById("next-btn8");
@@ -805,6 +907,7 @@
 
         const productImg9 = document.getElementById("product-img9");
         const productTitle9 = document.getElementById("product-title9");
+        const productColor9 = document.getElementById("product-color9");
         const productDescription9 = document.getElementById("product-description9");
         const prevBtn9 = document.getElementById("prev-btn9");
         const nextBtn9 = document.getElementById("next-btn9");
@@ -813,6 +916,7 @@
 
         const productImg10 = document.getElementById("product-img10");
         const productTitle10 = document.getElementById("product-title10");
+        const productColor10 = document.getElementById("product-color10");
         const productDescription10 = document.getElementById("product-description10");
         const prevBtn10 = document.getElementById("prev-btn10");
         const nextBtn10 = document.getElementById("next-btn10");
@@ -821,6 +925,7 @@
 
         const productImg11 = document.getElementById("product-img11");
         const productTitle11 = document.getElementById("product-title11");
+        const productColor11 = document.getElementById("product-color11");
         const productDescription11 = document.getElementById("product-description11");
         const prevBtn11 = document.getElementById("prev-btn11");
         const nextBtn11 = document.getElementById("next-btn11");
@@ -829,6 +934,7 @@
 
         const productImg12 = document.getElementById("product-img12");
         const productTitle12 = document.getElementById("product-title12");
+        const productColor12 = document.getElementById("product-color12");
         const productDescription12 = document.getElementById("product-description12");
         const prevBtn12 = document.getElementById("prev-btn12");
         const nextBtn12 = document.getElementById("next-btn12");
@@ -837,6 +943,7 @@
 
         const productImg13 = document.getElementById("product-img13");
         const productTitle13 = document.getElementById("product-title13");
+        const productColor13 = document.getElementById("product-color13");
         const productDescription13 = document.getElementById("product-description13");
         const prevBtn13 = document.getElementById("prev-btn13");
         const nextBtn13 = document.getElementById("next-btn13");
@@ -845,6 +952,7 @@
 
         const productImg14 = document.getElementById("product-img14");
         const productTitle14 = document.getElementById("product-title14");
+        const productColor14 = document.getElementById("product-color14");
         const productDescription14 = document.getElementById("product-description14");
         const prevBtn14 = document.getElementById("prev-btn14");
         const nextBtn14 = document.getElementById("next-btn14");
@@ -853,6 +961,7 @@
 
         const productImg15 = document.getElementById("product-img15");
         const productTitle15 = document.getElementById("product-title15");
+        const productColor15 = document.getElementById("product-color15");
         const productDescription15 = document.getElementById("product-description15");
         const prevBtn15 = document.getElementById("prev-btn15");
         const nextBtn15 = document.getElementById("next-btn15");
@@ -861,6 +970,7 @@
 
         const productImg16 = document.getElementById("product-img16");
         const productTitle16 = document.getElementById("product-title16");
+        const productColor16 = document.getElementById("product-color16");
         const productDescription16 = document.getElementById("product-description16");
         const prevBtn16 = document.getElementById("prev-btn16");
         const nextBtn16 = document.getElementById("next-btn16");
@@ -869,6 +979,7 @@
 
         const productImg17 = document.getElementById("product-img17");
         const productTitle17 = document.getElementById("product-title17");
+        const productColor17 = document.getElementById("product-color17");
         const productDescription17 = document.getElementById("product-description17");
         const prevBtn17 = document.getElementById("prev-btn17");
         const nextBtn17 = document.getElementById("next-btn17");
@@ -877,6 +988,7 @@
 
         const productImg18 = document.getElementById("product-img18");
         const productTitle18 = document.getElementById("product-title18");
+        const productColor18 = document.getElementById("product-color18");
         const productDescription18 = document.getElementById("product-description18");
         const prevBtn18 = document.getElementById("prev-btn18");
         const nextBtn18 = document.getElementById("next-btn18");
@@ -891,117 +1003,135 @@
         function showProduct() {
             const product = clothes.polo[currentIndex];
             productImg.src = product.imgSrc;
+            productColor.innerText = product.color
             productTitle.innerText = product.title;
             productDescription.innerText = product.description;
             productCost.innerText = product.cost + " Ft"
 
             const product2 = clothes.pullover[currentIndex2];
             productImg2.src = product2.imgSrc;
+            productColor2.innerText = product2.color
             productTitle2.innerText = product2.title;
             productDescription2.innerText = product2.description;
             productCost2.innerText = product2.cost + " Ft"
 
             const product3 = clothes.nadrag[currentIndex3];
             productImg3.src = product3.imgSrc;
+            productColor3.innerText = product3.color
             productTitle3.innerText = product3.title;
             productDescription3.innerText = product3.description;
             productCost3.innerText = product3.cost + " Ft"
 
             const product4 = clothes.kabat[currentIndex4];
             productImg4.src = product4.imgSrc;
+            productColor4.innerText = product4.color
             productTitle4.innerText = product4.title;
             productDescription4.innerText = product4.description;
             productCost4.innerText = product4.cost + " Ft"
 
             const product5 = clothes.rovidNadrag[currentIndex5];
             productImg5.src = product5.imgSrc;
+            productColor5.innerText = product5.color
             productTitle5.innerText = product5.title;
             productDescription5.innerText = product5.description;
             productCost5.innerText = product5.cost + " Ft"
 
             const product6 = clothes.zokni[currentIndex6];
             productImg6.src = product6.imgSrc;
+            productColor6.innerText = product6.color
             productTitle6.innerText = product6.title;
             productDescription6.innerText = product6.description;
             productCost6.innerText = product6.cost + " Ft"
 
             const product7 = clothes.alsónemű[currentIndex7];
             productImg7.src = product7.imgSrc;
+            productColor7.innerText = product7.color
             productTitle7.innerText = product7.title;
             productDescription7.innerText = product7.description;
             productCost7.innerText = product7.cost + " Ft"
 
             const product8 = clothes.fürdőruha[currentIndex8];
             productImg8.src = product8.imgSrc;
+            productColor8.innerText = product8.color
             productTitle8.innerText = product8.title;
             productDescription8.innerText = product8.description;
             productCost8.innerText = product8.cost + " Ft"
 
             const product9 = clothes.polo[currentIndex9];
             productImg9.src = product9.imgSrc;
+            productColor9.innerText = product9.color
             productTitle9.innerText = product9.title;
             productDescription9.innerText = product9.description;
             productCost9.innerText = product9.cost + " Ft"
 
             const product10 = clothes.pullover[currentIndex10];
             productImg10.src = product10.imgSrc;
+            productColor10.innerText = product10.color
             productTitle10.innerText = product10.title;
             productDescription10.innerText = product10.description;
             productCost10.innerText = product10.cost + " Ft"
 
             const product11 = clothes.nadrag[currentIndex11];
             productImg11.src = product11.imgSrc;
+            productColor11.innerText = product11.color
             productTitle11.innerText = product11.title;
             productDescription11.innerText = product11.description;
             productCost11.innerText = product11.cost + " Ft"
 
             const product12 = clothes.kabat[currentIndex12];
             productImg12.src = product12.imgSrc;
+            productColor12.innerText = product12.color
             productTitle12.innerText = product12.title;
             productDescription12.innerText = product12.description;
             productCost12.innerText = product12.cost + " Ft"
 
             const product13 = clothes.rovidNadrag[currentIndex13];
             productImg13.src = product13.imgSrc;
+            productColor13.innerText = product13.color
             productTitle13.innerText = product13.title;
             productDescription13.innerText = product13.description;
             productCost13.innerText = product13.cost + " Ft"
 
             const product14 = clothes.zokni[currentIndex14];
             productImg14.src = product14.imgSrc;
+            productColor14.innerText = product14.color
             productTitle14.innerText = product14.title;
             productDescription14.innerText = product14.description;
             productCost14.innerText = product14.cost + " Ft"
 
             const product15 = clothes.alsónemű[currentIndex15];
             productImg15.src = product15.imgSrc;
+            productColor15.innerText = product15.color
             productTitle15.innerText = product15.title;
             productDescription15.innerText = product15.description;
             productCost15.innerText = product15.cost + " Ft"
 
             const product16 = clothes.fürdőruha[currentIndex16];
             productImg16.src = product16.imgSrc;
+            productColor16.innerText = product16.color
             productTitle16.innerText = product16.title;
             productDescription16.innerText = product16.description;
             productCost16.innerText = product16.cost + " Ft"
 
             const product17 = clothes.ruha[currentIndex17];
             productImg17.src = product17.imgSrc;
+            productColor17.innerText = product17.color
             productTitle17.innerText = product17.title;
             productDescription17.innerText = product17.description;
             productCost17.innerText = product17.cost + " Ft"
 
             const product18 = clothes.szoknya[currentIndex18];
             productImg18.src = product18.imgSrc;
+            productColor18.innerText = product18.color;
             productTitle18.innerText = product18.title;
             productDescription18.innerText = product18.description;
             productCost18.innerText = product18.cost + " Ft"
 
 
 
- 
-}
-        
+
+        }
+
 
         //lehetővé teszi hogy az előző elemet lásd
         prevBtn.addEventListener("click", () => {
@@ -1018,7 +1148,7 @@
             }
         });
 
-        
+
 
         showProduct();
 
@@ -1256,18 +1386,24 @@
         });
 
 
-       showProduct();
+        showProduct();
+       
+      
 
-       function filterByPrice(clothes, minPrice, maxPrice) {
+        function filterProducts(clothes, minPrice, maxPrice, color) {
   let filteredClothes = {};
 
+  let result = '';
+
   for (let category in clothes) {
-    let filteredCategory = clothes[category].filter(item => item.cost >= minPrice && item.cost <= maxPrice);
+    let filteredCategory = clothes[category].filter(
+      (item) => item.cost >= minPrice && item.cost <= maxPrice && item.color.toLowerCase() === color.toLowerCase()
+    );
 
     if (filteredCategory.length > 0) {
-      filteredClothes[category] = filteredCategory.sort((a, b) => a.cost - b.cost);
-
-      let result = '';
+      filteredClothes[category] = filteredCategory.sort(
+        (a, b) => a.cost - b.cost
+      );
 
       for (let i = 0; i < filteredCategory.length; i++) {
         result += `
@@ -1275,30 +1411,28 @@
             <img src="${filteredCategory[i].imgSrc}" alt="${filteredCategory[i].title}" style="height: 200px;">
             <div class="card-body">
               <h5 class="card-title">${filteredCategory[i].title}</h5>
+              <h5 class="card-text">${filteredCategory[i].color}</h5>
               <p class="card-text">${filteredCategory[i].description}</p>
               <p class="card-text">Price: ${filteredCategory[i].cost} Ft</p>
             </div>
           </div>
         `;
       }
-
-      document.getElementById(`produc`).innerHTML = result;
     }
   }
 
+  document.getElementById(`produc`).innerHTML = result;
+
   return filteredClothes;
 }
+
 function showFilteredProducts() {
   const minPrice = document.getElementById('min-price').value;
   const maxPrice = document.getElementById('max-price').value;
+  const color = document.getElementById('color').value;
 
-  const filteredProducts = filterByPrice(clothes, minPrice, maxPrice);
-  showProduct(filteredProducts);
+  const filteredProducts = filterProducts(clothes, Number(minPrice), Number(maxPrice), color);
 }
-
-      
-
-
     </script>
 
 </body>
