@@ -26,15 +26,14 @@
 
 
     <div class="container" id="products">
-        <label for="min-price">Minimum price:</label>
+        <label for="min-price">Minimum ár:</label>
         <input type="number" id="min-price" name="min-price">
-        <label for="max-price">Maximum price:</label>
+        <label for="max-price">Maximum ár:</label>
         <input type="number" id="max-price" name="max-price">
-        <button onclick="showFilteredProducts()">Filter by price</button>
+        <button onclick="showFilteredProducts()">Szűrés</button>
 
-        <label for="color-filter">Filter by color:</label>
-        <input type="text" id="color" placeholder="Enter color">
-        <button onclick="showFilteredProducts()">Filter by color</button>
+        <label for="color-filter">Szint szerinti szűrés:</label>
+        <input type="text" id="color" placeholder="Add meg a színt">
         <div id="product-container"></div>
         <div class=" dropdown">
 
@@ -1397,7 +1396,18 @@
 
   for (let category in clothes) {
     let filteredCategory = clothes[category].filter(
-      (item) => item.cost >= minPrice && item.cost <= maxPrice && item.color.toLowerCase() === color.toLowerCase()
+      (item) => {
+        if (color && !item.color.toLowerCase().includes(color.toLowerCase())) {
+          return false;
+        }
+        if (minPrice && item.cost < minPrice) {
+          return false;
+        }
+        if (maxPrice && item.cost > maxPrice) {
+          return false;
+        }
+        return true;
+      }
     );
 
     if (filteredCategory.length > 0) {
@@ -1408,7 +1418,7 @@
       for (let i = 0; i < filteredCategory.length; i++) {
         result += `
           <div class="card col-sm-6 col-md-4 col-lg-3">
-            <img src="${filteredCategory[i].imgSrc}" alt="${filteredCategory[i].title}" style="height: 200px;">
+            <img width="250" src="${filteredCategory[i].imgSrc}" alt="${filteredCategory[i].title}" style="height: 200px;">
             <div class="card-body">
               <h5 class="card-title">${filteredCategory[i].title}</h5>
               <h5 class="card-text">${filteredCategory[i].color}</h5>
@@ -1418,10 +1428,9 @@
           </div>
         `;
       }
+      document.getElementById(`produc`).innerHTML = result;
     }
   }
-
-  document.getElementById(`produc`).innerHTML = result;
 
   return filteredClothes;
 }
