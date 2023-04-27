@@ -46,7 +46,7 @@
                     <div class="col-4">
 
                         <div class="card">
-                            <img id="product-img" src="" class="card-img-top" alt="...">
+                            <img onmouseover="kepCsere()" onmouseout="kepCsere()" id="product-img" src="" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 id="product-title" class="card-title"></h5>
                                 <p id="product-color" class="card-text"></p>
@@ -1824,6 +1824,15 @@ function showFilteredProducts() {
   const color = document.getElementById('color').value;
 
   const filteredProducts = filterProducts(clothes, Number(minPrice), Number(maxPrice), color);
+}
+
+function kepCsere() {
+  var kep = document.getElementById("product-img");
+  if (kep.src.match("https://polomania.hu/images/items/tn3/mobile/3/6/f/36f8fe51.jpg")) {
+    kep.src = "https://ajandekozd.hu/wp-content/uploads/2017/11/fol-kapucnis-pulover-ferfi-fekete.jpg";
+  } else {
+    kep.src = "https://polomania.hu/images/items/tn3/mobile/3/6/f/36f8fe51.jpg";
+  }
 }
     </script>
 
