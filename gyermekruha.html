@@ -46,7 +46,8 @@
                     <div class="col-4">
 
                         <div class="card">
-                            <img onmouseover="kepCsere()" onmouseout="kepCsere()" id="product-img" src="" class="card-img-top" alt="...">
+                            <img onmouseover="kepCsere()" onmouseout="kepCsere()" id="product-img" src=""
+                                class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 id="product-title" class="card-title"></h5>
                                 <p id="product-color" class="card-text"></p>
@@ -207,8 +208,8 @@
 
         </div>
         <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton2"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 lány
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -425,14 +426,20 @@
 
             polo: [
                 {
-                    imgSrc: "https://polomania.hu/images/items/tn3/mobile/3/6/f/36f8fe51.jpg",
+                    images: [
+                        "https://polomania.hu/images/items/tn3/mobile/3/6/f/36f8fe51.jpg",
+                        "https://poloido.hu/wp-content/uploads/faszfej-polo-feher.png"
+                    ],
                     title: "Póló 1",
                     color: "Zöld",
                     description: "Leírás a ruhadarabról 1",
                     cost: 1000
                 },
                 {
-                    imgSrc: "https://poloido.hu/wp-content/uploads/faszfej-polo-feher.png",
+                    images: [
+                        "https://polomania.hu/images/items/tn3/mobile/3/6/f/36f8fe51.jpg",
+                        "https://ajandekozd.hu/wp-content/uploads/2017/11/fol-kapucnis-pulover-ferfi-fekete.jpg"
+                    ],
                     title: "Póló 2",
                     color: "Piros",
                     description: "Leírás a ruhadarabról 2",
@@ -452,7 +459,7 @@
                     description: "Leírás a ruhadarabról 2",
                     cost: 3122
                 },
-              
+
                 {
                     imgSrc: "https://isabel-5b8d.kxcdn.com/pamutlabor/plab00011693/plab00011693-ferfi_polo-sportszurke-768x768.jpg",
                     title: "Póló 5",
@@ -515,14 +522,20 @@
 
             pullover: [
                 {
-                    imgSrc: "https://ajandekozd.hu/wp-content/uploads/2017/11/fol-kapucnis-pulover-ferfi-fekete.jpg",
+                    images: [
+                        "https://polomolo.hu/wp-content/uploads/2021/10/ferfi-kapucnis-pulover-military-zold-gi185-600x600.jpg",
+                        "https://ajandekozd.hu/wp-content/uploads/2017/11/fol-kapucnis-pulover-ferfi-fekete.jpg"
+                    ],
                     title: "Pulóver",
                     color: "Barna",
                     description: "Leírás a ruhadarabról 1",
                     cost: 10410
                 },
                 {
-                    imgSrc: "https://eu-cdn.portya.net/inc/uploads/2016/05/portya_ferfi_kapucnis_pulover_mohzold_oldalt-435x435.jpg",
+                    images: [
+                        "https://ajandekozd.hu/wp-content/uploads/2017/11/fol-kapucnis-pulover-ferfi-fekete.jpg",
+                        "https://polomolo.hu/wp-content/uploads/2021/10/ferfi-kapucnis-pulover-military-zold-gi185-600x600.jpg"
+                    ],
                     title: "Pulóver 2",
                     color: "Fehér",
                     description: "Leírás a ruhadarabról 2",
@@ -729,7 +742,7 @@
                     description: "Leírás a ruhadarabról 3",
                     cost: 5000
                 },
-                 {
+                {
                     imgSrc: "https://ajandekozd.hu/wp-content/uploads/2017/11/fol-kapucnis-pulover-ferfi-fekete.jpg",
                     title: "KabátL",
                     color: "Kék",
@@ -794,7 +807,7 @@
                     color: "Fekete",
                     description: "Leírás a ruhadarabról 3",
                     cost: 5000
-                }, 
+                },
                 {
                     imgSrc: "https://ajandekozd.hu/wp-content/uploads/2017/11/fol-kapucnis-pulover-ferfi-fekete.jpg",
                     title: "Rövid nadrág 4",
@@ -1011,7 +1024,7 @@
                     description: "Leírás a ruhadarabról 3",
                     cost: 5000
                 },
-                
+
                 {
                     imgSrc: "https://eu-cdn.portya.net/inc/uploads/2016/05/portya_ferfi_kapucnis_pulover_mohzold_oldalt-435x435.jpg",
                     title: "aslóL 4",
@@ -1076,7 +1089,7 @@
                     color: "Zöld",
                     description: "Leírás a ruhadarabról 3",
                     cost: 5000
-                },  
+                },
                 {
                     imgSrc: "https://ajandekozd.hu/wp-content/uploads/2017/11/fol-kapucnis-pulover-ferfi-fekete.jpg",
                     title: "fürdőL 1",
@@ -1384,14 +1397,14 @@
         //a funkció ami végigmegy a tömb elemein és behelyetesíti a kártyába
         function showProduct() {
             const product = clothes.polo[currentIndex];
-            productImg.src = product.imgSrc;
+            productImg.src = product.images[0];
             productColor.innerText = product.color
             productTitle.innerText = product.title;
             productDescription.innerText = product.description;
             productCost.innerText = product.cost + " Ft"
 
             const product2 = clothes.pullover[currentIndex2];
-            productImg2.src = product2.imgSrc;
+            productImg2.src = product2.images[0];
             productColor2.innerText = product2.color
             productTitle2.innerText = product2.title;
             productDescription2.innerText = product2.description;
@@ -1513,6 +1526,31 @@
 
 
         }
+
+        function polocsere(index) {
+            const product = clothes.polo[currentIndex];
+            productImg.src = product.images[index];
+        }
+
+        productImg.onmouseover = () => {
+            polocsere(1);
+        };
+
+        productImg.onmouseout = () => {
+            polocsere(0);
+        };
+        function pullovercsere(index) {
+            const product2 = clothes.pullover[currentIndex2];
+            productImg2.src = product2.images[index];
+        }
+
+        productImg2.onmouseover = () => {
+            pullovercsere(1);
+        };
+
+        productImg2.onmouseout = () => {
+            pullovercsere(0);
+        };
 
 
         //lehetővé teszi hogy az előző elemet lásd
@@ -1769,37 +1807,37 @@
 
 
         showProduct();
-       
-      
+
+
 
         function filterProducts(clothes, minPrice, maxPrice, color) {
-  let filteredClothes = {};
+            let filteredClothes = {};
 
-  let result = '';
+            let result = '';
 
-  for (let category in clothes) {
-    let filteredCategory = clothes[category].filter(
-      (item) => {
-        if (color && !item.color.toLowerCase().includes(color.toLowerCase())) {
-          return false;
-        }
-        if (minPrice && item.cost < minPrice) {
-          return false;
-        }
-        if (maxPrice && item.cost > maxPrice) {
-          return false;
-        }
-        return true;
-      }
-    );
+            for (let category in clothes) {
+                let filteredCategory = clothes[category].filter(
+                    (item) => {
+                        if (color && !item.color.toLowerCase().includes(color.toLowerCase())) {
+                            return false;
+                        }
+                        if (minPrice && item.cost < minPrice) {
+                            return false;
+                        }
+                        if (maxPrice && item.cost > maxPrice) {
+                            return false;
+                        }
+                        return true;
+                    }
+                );
 
-    if (filteredCategory.length > 0) {
-      filteredClothes[category] = filteredCategory.sort(
-        (a, b) => a.cost - b.cost
-      );
+                if (filteredCategory.length > 0) {
+                    filteredClothes[category] = filteredCategory.sort(
+                        (a, b) => a.cost - b.cost
+                    );
 
-      for (let i = 0; i < filteredCategory.length; i++) {
-        result += `
+                    for (let i = 0; i < filteredCategory.length; i++) {
+                        result += `
           <div class="card col-sm-6 col-md-4 col-lg-3">
             <img width="250" src="${filteredCategory[i].imgSrc}" alt="${filteredCategory[i].title}" style="height: 200px;">
             <div class="card-body">
@@ -1810,30 +1848,28 @@
             </div>
           </div>
         `;
-      }
-      document.getElementById(`produc`).innerHTML = result;
-    }
-  }
+                    }
+                    document.getElementById(`produc`).innerHTML = result;
+                }
+            }
 
-  return filteredClothes;
-}
+            return filteredClothes;
+        }
 
-function showFilteredProducts() {
-  const minPrice = document.getElementById('min-price').value;
-  const maxPrice = document.getElementById('max-price').value;
-  const color = document.getElementById('color').value;
+        function showFilteredProducts() {
+            const minPrice = document.getElementById('min-price').value;
+            const maxPrice = document.getElementById('max-price').value;
+            const color = document.getElementById('color').value;
 
-  const filteredProducts = filterProducts(clothes, Number(minPrice), Number(maxPrice), color);
-}
+            const filteredProducts = filterProducts(clothes, Number(minPrice), Number(maxPrice), color);
+        }
 
-function kepCsere() {
-  var kep = document.getElementById("product-img");
-  if (kep.src.match("https://polomania.hu/images/items/tn3/mobile/3/6/f/36f8fe51.jpg")) {
-    kep.src = "https://ajandekozd.hu/wp-content/uploads/2017/11/fol-kapucnis-pulover-ferfi-fekete.jpg";
-  } else {
-    kep.src = "https://polomania.hu/images/items/tn3/mobile/3/6/f/36f8fe51.jpg";
-  }
-}
+
+
+
+
+
+
     </script>
 
 </body>
