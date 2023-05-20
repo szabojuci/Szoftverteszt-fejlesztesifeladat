@@ -18,8 +18,24 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-    <style>
-        .button {
+        <style>
+            body {
+            background-color: #FFFACD;
+          }
+          
+          .container {
+            margin-top: 20px;
+            background-color: #FFDAB9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            color: #333333; /* Set text color to a dark shade for better readability */
+          }
+          
+          
+          
+          
+               .button {
             display: block;
             font-size: 16px;
             margin: 4px 2px;
@@ -32,56 +48,88 @@
             border: none;
             border-radius: 15px;
             box-shadow: 0 9px #999;
-        }
-
-        .fiubutton {
+          }
+          
+          .fiubutton {
             background-color: rgb(63, 35, 218);
             color: black;
-        }
-
-        .fiubutton:hover {
+          }
+          
+          .fiubutton:hover {
             background-color: #2b1491;
-        }
-
-        .fiubutton:active {
+          }
+          
+          .fiubutton:active {
             background-color: #2b1491;
             transform: translateY(10px);
-        }
-
-        .lanybutton {
+          }
+          
+          .lanybutton {
             background-color: rgb(238, 81, 199);
             color: black;
-            float: left;
-        }
-
-        .lanybutton:hover {
+          }
+          
+          .lanybutton:hover {
             background-color: #9c1591
-        }
-
-        .lanybutton:active {
+          }
+          
+          .lanybutton:active {
             background-color: #9c1591;
             transform: translateY(10px);
-        }
-
-        .dropdown-buttons {
+          }
+          
+          .dropdown-buttons {
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-
-        .dropdown-menu {
+          }
+          
+          .dropdown-menu {
             border: none;
             border-radius: 0;
             box-shadow: none;
-        }
-        .card-title{
-            font-size: smaller;
-        }
-        .card-img-top{
-            width: 148px;
-            height: 200px;
-        }
-    </style>
+          }
+          .container {
+            margin-top: 20px;
+          }
+          
+          .sorting-options {
+            margin-bottom: 20px;
+          }
+          
+          .dropdown-menu {
+            width: 100%;
+            padding: 10px;
+          }
+          
+          .card {
+            margin-bottom: 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+          }
+          
+          .card img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 3px;
+          }
+          
+          .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+          }
+          
+          .card-price {
+            font-size: 16px;
+            color: #007bff;
+          }
+          
+                  
+                  </style>
 </head>
 
 <body>
@@ -233,10 +281,10 @@
                                 <p id="product-cost7" class="card-text"></p>
                             </div>
                             <div class="pagination">
-                                <button id="prev-btn7" class="prev-btn"
-                                    onclick="event.stopPropagation();">Előző</button>
+                                <button  id="prev-btn7" class="prev-btn"
+                                    onclick="event.stopPropagation();" disabled>Előző</button>
                                 <button id="next-btn7" class="next-btn"
-                                    onclick="event.stopPropagation();">Következő</button>
+                                    onclick="event.stopPropagation();" disabled>Következő</button>
                             </div>
                         </div>
 
@@ -253,9 +301,9 @@
                             </div>
                             <div class="pagination">
                                 <button id="prev-btn8" class="prev-btn"
-                                    onclick="event.stopPropagation();">Előző</button>
+                                    onclick="event.stopPropagation();" disabled>Előző</button>
                                 <button id="next-btn8" class="next-btn"
-                                    onclick="event.stopPropagation();">Következő</button>
+                                    onclick="event.stopPropagation();" disabled>Következő</button>
                             </div>
                         </div>
 
@@ -404,9 +452,9 @@
                             </div>
                             <div class="pagination">
                                 <button id="prev-btn15" class="prev-btn"
-                                    onclick="event.stopPropagation();">Előző</button>
+                                    onclick="event.stopPropagation();" disabled>Előző</button>
                                 <button id="next-btn15" class="next-btn"
-                                    onclick="event.stopPropagation();">Következő</button>
+                                    onclick="event.stopPropagation();" disabled>Következő</button>
                             </div>
 
                         </div>
@@ -423,9 +471,9 @@
                             </div>
                             <div class="pagination">
                                 <button id="prev-btn16" class="prev-btn"
-                                    onclick="event.stopPropagation();">Előző</button>
+                                    onclick="event.stopPropagation();" disabled>Előző</button>
                                 <button id="next-btn16" class="next-btn"
-                                    onclick="event.stopPropagation();">Következő</button>
+                                    onclick="event.stopPropagation();" disabled>Következő</button>
                             </div>
 
                         </div>
@@ -506,47 +554,6 @@
                 },
                 {
                     images: [
-                        "img/fiu/polo-zold.jpg",
-                        "img/fiu/polo-zold2.jpg"
-                    ],
-                    title: "Póló",
-                    color: "Zöld",
-                    description: "Fiú, zöld póló",
-                    cost: 1000
-                },
-                {
-                    images: [
-                        "img/fiu/polo-narancs.jpg",
-                        "img/fiu/polo-narancs2.jpg"
-                    ],
-                    title: "Póló",
-                    color: "Narancs",
-                    description: "Fiú, narancs póló",
-                    cost: 2400
-                },
-
-                {
-                    images: [
-                        "img/fiu/polo-hkek.jpg",
-                        "img/fiu/polo-hkek2.jpg"
-                    ],
-                    title: "Póló",
-                    color: "Halványkék",
-                    description: "Fiú, halványkék póló",
-                    cost: 1000
-                },
-                {
-                    images: [
-                        "img/fiu/kockasing.jpg",
-                        "img/fiu/kockasing2.jpg"
-                    ],
-                    title: "Ing",
-                    color: "Kék-zöld",
-                    description: "Fiú, színes kockás ing",
-                    cost: 3000
-                },
-                {
-                    images: [
                         "img/lany/polo-lila.jpg",
                         "img/lany/polo-lila2.jpg"
                     ],
@@ -564,46 +571,6 @@
                     color: "Sárga",
                     description: "Lány, sárga póló",
                     cost: 1500
-                },
-                {
-                    images: [
-                        "img/lany/polo-narancs.jpg",
-                        "img/lany/polo-narancs2.jpg"
-                    ],
-                    title: "Póló",
-                    color: "Narancs",
-                    description: "Lány, narancs póló",
-                    cost: 2500
-                },
-                {
-                    images: [
-                        "img/lany/polo-lila3.jpg",
-                        "img/lany/polo-lila4.jpg"
-                    ],
-                    title: "Póló",
-                    color: "Lila",
-                    description: "Lány, lila póló",
-                    cost: 2300
-                },
-                {
-                    images: [
-                        "img/lany/polo-pink.jpg",
-                        "img/lany/polo-pink2.jpg"
-                    ],
-                    title: "Póló",
-                    color: "Rózsaszín",
-                    description: "Lány, pink póló",
-                    cost: 3000
-                },
-                {
-                    images: [
-                        "img/lany/polo-kek.jpg",
-                        "img/lany/polo-kek2.jpg"
-                    ],
-                    title: "Póló",
-                    color: "Kék",
-                    description: "Lány, kék póló",
-                    cost: 2000
                 }
             ],
 
@@ -630,50 +597,12 @@
                     description: "Fiú, zöld pulcsi",
                     cost: 2500
                 },
+                
+                    
                 {
                     images: [
-                        "img/fiu/pulcsi-fekete.jpg",
-                        "img/fiu/pulcsi-fekete2.jpg"
-                    ],
-                    title: "Pulóver",
-                    color: "Fekete",
-                    description: "Fiú, fekete pulcsi",
-                    cost: 5000
-                },
-                {
-                    images: [
-                        "img/fiu/pulcsi-sarga.jpg",
-                        "img/fiu/pulcsi-sarga2.jpg"
-                    ],
-                    title: "Pulóver",
-                    color: "Sárga",
-                    description: "Fiú, sárga pulcsi",
-                    cost: 3500
-                },
-                {
-                    images: [
-                        "img/fiu/pulcsi-szurke.jpg",
-                        "img/fiu/pulcsi-szurke2.jpg"
-                    ],
-                    title: "Pulóver",
-                    color: "Szürke",
-                    description: "Fiú, szürke pulcsi",
-                    cost: 2400
-                },
-                {
-                    images: [
-                        "img/fiu/pulcsi-kek.jpg",
-                        "img/fiu/pulcsi-kek2.jpg"
-                    ],
-                    title: "Púlóver",
-                    color: "Kék",
-                    description: "Fiú, kék pulcsi",
-                    cost: 3000
-                },
-                {
-                    images: [
-                        "img/lany/pulcsi-ibolya.jpg",
-                        "img/lany/pulcsi-ibolya2.jpg"
+                        "img/lany/Pulcsi-ibolya.jpg",
+                        "img/lany/Pulcsi-ibolya2.jpg"
                     ],
                     title: "Pulóver",
                     color: "Ibolya",
@@ -682,54 +611,14 @@
                 },
                 {
                     images: [
-                        "img/lany/pulcsi-pink.jpg",
-                        "img/lany/pulcsi-pink2.jpg"
+                        "img/lany/Pulcsi-pink.jpg",
+                        "img/lany/Pulcsi-pink2.jpg"
                     ],
                     title: "Pulóver",
                     color: "Pink",
                     description: "Lány, pink pulcsi",
                     cost: 2000
                 },
-                {
-                    images: [
-                        "img/lany/pulcsi-pink3.jpg",
-                        "img/lany/pulcsi-pink4.jpg"
-                    ],
-                    title: "Púlóver",
-                    color: "Pink",
-                    description: "Lány, pink pulcsi",
-                    cost: 4000
-                },
-                {
-                    images: [
-                        "img/lany/pulcsi-szurke.jpg",
-                        "img/lany/pulcsi-szurke2.jpg"
-                    ],
-                    title: "Pulóver",
-                    color: "Szürke",
-                    description: "Lány, szürke pulcsi",
-                    cost: 4000
-                },
-                {
-                    images: [
-                        "img/lany/pulcsi-sarga.jpg",
-                        "img/lany/pulcsi-sarga2.jpg"
-                    ],
-                    title: "Pulóver",
-                    color: "Sárga",
-                    description: "Lány, sárga pulcsi",
-                    cost: 2500
-                },
-                {
-                    images: [
-                        "img/lany/pulcsi-kek.jpg",
-                        "img/lany/pulcsi-kek2.jpg"
-                    ],
-                    title: "Púlóver",
-                    color: "Kék",
-                    description: "Lány, kék pulcsi",
-                    cost: 3000
-                }
             ],
 
             nadrag: [
@@ -753,46 +642,7 @@
                     description: "Fiú, kék nadrág",
                     cost: 6000
                 },
-                {
-                    images: [
-                        "img/fiu/nadrag-fekete.jpg",
-                        "img/fiu/nadrag-fekete2.jpg"
-                    ],
-                    title: "Nadrág",
-                    color: "Fekete",
-                    description: "Fiú, fekete nadrág",
-                    cost: 5000
-                },
-                {
-                    images: [
-                        "img/fiu/nadrag-szurke.jpg",
-                        "img/fiu/nadrag-szurke2.jpg"
-                    ],
-                    title: "Nadrág",
-                    color: "Szürke",
-                    description: "Fiú, szürke nadrág",
-                    cost: 3000
-                },
-                {
-                    images: [
-                        "img/fiu/nadrag-lila.jpg",
-                        "img/fiu/nadrag-lila2.jpg"
-                    ],
-                    title: "Nadrág",
-                    color: "Lila",
-                    description: "Fiú, lila nadrág",
-                    cost: 3000
-                },
-                {
-                    images: [
-                        "img/fiu/nadrag-barna.jpg",
-                        "img/fiu/nadrag-barna2.jpg"
-                    ],
-                    title: "Nadrág",
-                    color: "Barna",
-                    description: "Fiú, barna nadrág",
-                    cost: 3500
-                },
+               
                 {
                     images: [
                         "img/lany/nadrag-feher.jpg",
@@ -812,47 +662,9 @@
                     color: "Kék",
                     description: "Lány, kék nadrág",
                     cost: 6000
-                },
-                {
-                    images: [
-                        "img/lany/nadrag-pink.jpg",
-                        "img/lany/nadrag-pink2.jpg"
-                    ],
-                    title: "Nadrág",
-                    color: "Pink",
-                    description: "Lány, pink nadrág",
-                    cost: 2500
-                },
-                {
-                    images: [
-                        "img/lany/nadrag-lila.jpg",
-                        "img/lany/nadrag-lila2.jpg"
-                    ],
-                    title: "Nadrág",
-                    color: "Lila",
-                    description: "Lány, lila nadrág",
-                    cost: 4000
-                },
-                {
-                    images: [
-                        "img/lany/nadrag-zold.jpg",
-                        "img/lany/nadrag-zold2.jpg"
-                    ],
-                    title: "Nadrág",
-                    color: "Zöld",
-                    description: "Lány, zöld nadrág",
-                    cost: 6000
-                },
-                {
-                    images: [
-                        "img/lany/nadrag-fekete.jpg",
-                        "img/lany/nadrag-fekete2.jpg"
-                    ],
-                    title: "Nadrág",
-                    color: "Fekete",
-                    description: "Lány, fekete nadrág",
-                    cost: 2500
                 }
+                
+            
             ],
             kabat: [
                 {
@@ -876,16 +688,7 @@
                     cost: 13500
                 },
                 {
-                    images: [
-                        "img/fiu/Kabat-kek.jpg",
-                        "img/fiu/Kabat-kek2.jpg"
-                    ],
-                    title: "Kabát",
-                    color: "Kék",
-                    description: "Fiú, kék kabát",
-                    cost: 5000
-                },
-                {
+               
                     images: [
                         "img/lany/kabat-kek.jpg",
                         "img/lany/kabat-kek2.jpg"
@@ -904,17 +707,8 @@
                     color: "Sárga",
                     description: "Lány, sárga kabát",
                     cost: 12000
-                },
-                {
-                    images: [
-                        "img/lany/kabat-feher.jpg",
-                        "img/lany/kabat-feher2.jpg"
-                    ],
-                    title: "Kabát",
-                    color: "Fehér",
-                    description: "Lány, fehér kabát",
-                    cost: 5000
-                },
+                }
+               
             ],
 
             rovidNadrag: [
@@ -938,16 +732,7 @@
                     description: "Fiú, kék rövidnadrág",
                     cost: 6500
                 },
-                {
-                    images: [
-                        "img/fiu/Rovidnadrag-feher.jpg",
-                        "img/fiu/Rovidnadrag-feher.jpg"
-                    ],
-                    title: "Rövidnadrág",
-                    color: "Fehér",
-                    description: "Fiú, fehér rövidnadrág",
-                    cost: 5000
-                },
+                
                 {
                     images: [
                         "img/lany/rovidnadrag-kek.jpg",
@@ -967,17 +752,8 @@
                     color: "Lila",
                     description: "Lány, lila rövidnadrág",
                     cost: 5500
-                },
-                {
-                    images: [
-                        "img/lany/rovidnadrag-sarga.jpg",
-                        "img/lany/rovidnadrag-sarga2.jpg"
-                    ],
-                    title: "Rövidnadrág",
-                    color: "Sárga",
-                    description: "Lány, sárga rövidnadrág",
-                    cost: 2000
                 }
+                
                
             ],
             zokni: [
@@ -1004,16 +780,6 @@
                 },
                 {
                     images: [
-                        "img/fiu/5par-zokni2.png",
-                        "img/fiu/5par-zokni2.png"
-                    ],
-                    title: "Zokni",
-                    color: "Kék, Sárga, Szürke, Fekete, Lila",
-                    description: "Fiú, 5 pár zokni",
-                    cost: 5000
-                },
-                {
-                    images: [
                         "img/lany/2pár-zokni.jpg",
                         "img/lany/2pár-zokni.jpg"
                     ],
@@ -1031,50 +797,20 @@
                     color: "Szürke, Rózsaszín, Fehér",
                     description: "Lány, 3 pár zokni",
                     cost: 2000
-                },
-                {
-                    images: [
-                        "img/lany/3par-zokni.jpg",
-                        "img/lany/3par-zokni.jpg"
-                    ],
-                    title: "Zokni",
-                    color: "Pink, Fehér, Szürke",
-                    description: "Lány, 3 pár zokni",
-                    cost: 5000
                 }
-
+                
             ],
 
             alsonemu: [
                 {
                     images: [
-                        "img/fiu/3db-also2.jpg",
+                        "img/fiu/3db-also.jpg",
                         "img/fiu/3db-also2.jpg"
                     ],
                     title: "Alsó",
                     color: "Fehér, Kék, Világos Kék",
                     description: "Fiú, 3db alsó",
                     cost: 2000
-                },
-                {
-                    images: [
-                        "img/fiu/2db-also.jpg",
-                        "img/fiu/2db-also.jpg"
-                    ],
-                    title: "Alsó",
-                    color: "Kék",
-                    description: "Leírás a ruhadarabról 2",
-                    cost: 3000
-                },
-                {
-                    images: [
-                        "img/fiu/3db-also02.jpg",
-                        "img/fiu/3db-also02.jpg"
-                    ],
-                    title: "Alsó",
-                    color: "Piros, Kék, Szürke",
-                    description: "Leírás a ruhadarabról 3",
-                    cost: 5000
                 },
                 {
                     images: [
@@ -1085,61 +821,22 @@
                     color: "Rózsaszin, Fehér, Világos Szürke",
                     description: "Lány, 5db alsó",
                     cost: 3000
-                },
-                {
-                    images: [
-                        "img/lany/3db-also.jpg",
-                        "img/lany/3db-also.jpg"
-                    ],
-                    title: "Alsó",
-                    color: "Szürke, Pink, Kék",
-                    description: "Lány, 3db alsó",
-                    cost: 2000
-                },
-                {
-                    images: [
-                        "img/lany/3db-also2.jpg",
-                        "img/lany/3db-also2.jpg"
-                    ],
-                    title: "Alsó",
-                    color: "Zöld, Virágos, Fehér",
-                    description: "Lány, 3db alsó",
-                    cost: 5000
                 }
+            
 
             ],
             furdoruha: [
-                {
+            {
                     images: [
-                        "img/fiu/furdo.jpg",
-                        "img/fiu/furdo.jpg"
+                        "img/fiu/furdoruha.avif",
+                        "img/fiu/furdoruha2.avif"
                     ],
                     title: "Fürdőruha",
-                    color: "Zöld",
-                    description: "Fiú, zöld fürdőnadrág",
-                    cost: 5000
-                },
-                {
-                    images: [
-                        "img/fiu/furdo2.jpg",
-                        "img/fiu/furdo2.jpg"
-                    ],
-                    title: "Fürdő",
-                    color: "Kék",
-                    description: "Fiú, kék fürdőnadrág",
-                    cost: 10000
-                },
-                {
-                    images: [
-                        "img/fiu/furdo3.jpg",
-                        "img/fiu/furdo3.jpg"
-                    ],
-                    title: "Fürdő",
-                    color: "Zöld",
-                    description: "Fiú, dínós fürdőnadrág",
-                    cost: 5000
-                },
-                {
+                    color: "Rózsaszín",
+                    description: "Lány, rózsaszín fürdőruha",
+                    cost: 2000
+                },    
+            {
                     images: [
                         "img/lany/furdoruha.jpg",
                         "img/lany/furdoruha.jpg"
@@ -1148,27 +845,8 @@
                     color: "Rózsaszín",
                     description: "Lány, rózsaszín fürdőruha",
                     cost: 2000
-                },
-                {
-                    images: [
-                        "img/lany/furdoruha2.jpg",
-                        "img/lany/furdoruha2.jpg"
-                    ],
-                    title: "Fürdőruha",
-                    color: "Kék",
-                    description: "Lány, rózsaszín fürdőruha",
-                    cost: 2000
-                },
-                {
-                    images: [
-                        "img/lany/furdoruha3.jpg",
-                        "img/lany/furdoruha3.jpg"
-                    ],
-                    title: "Fürdőruha",
-                    color: "Rózsaszín",
-                    description: "Lány, rózsaszín fürdőruha",
-                    cost: 3000
                 }
+                
                
             ],
             ruha: [
@@ -1191,17 +869,8 @@
                     color: "Lila",
                     description: "Lány, lila ruha",
                     cost: 4000
-                },
-                {
-                    images: [
-                        "img/lany/ruha-sarga.jpg",
-                        "img/lany/ruha-sarga2.jpg"
-                    ],
-                    title: "Ruha",
-                    color: "Sárga",
-                    description: "Lány, sárga ruha",
-                    cost: 4000
                 }
+                
                
             ],
             szoknya: [
@@ -1321,7 +990,7 @@
         const prevBtn9 = document.getElementById("prev-btn9");
         const nextBtn9 = document.getElementById("next-btn9");
         const productCost9 = document.getElementById("product-cost9")
-        let currentIndex9 = 6;
+        let currentIndex9 = 2;
 
         const productImg10 = document.getElementById("product-img10");
         const productTitle10 = document.getElementById("product-title10");
@@ -1330,7 +999,7 @@
         const prevBtn10 = document.getElementById("prev-btn10");
         const nextBtn10 = document.getElementById("next-btn10");
         const productCost10 = document.getElementById("product-cost10")
-        let currentIndex10 = 6;
+        let currentIndex10 = 2;
 
         const productImg11 = document.getElementById("product-img11");
         const productTitle11 = document.getElementById("product-title11");
@@ -1339,7 +1008,7 @@
         const prevBtn11 = document.getElementById("prev-btn11");
         const nextBtn11 = document.getElementById("next-btn11");
         const productCost11 = document.getElementById("product-cost11")
-        let currentIndex11 = 6;
+        let currentIndex11 = 2;
 
         const productImg12 = document.getElementById("product-img12");
         const productTitle12 = document.getElementById("product-title12");
@@ -1348,7 +1017,7 @@
         const prevBtn12 = document.getElementById("prev-btn12");
         const nextBtn12 = document.getElementById("next-btn12");
         const productCost12 = document.getElementById("product-cost12")
-        let currentIndex12 = 3;
+        let currentIndex12 = 2;
 
         const productImg13 = document.getElementById("product-img13");
         const productTitle13 = document.getElementById("product-title13");
@@ -1357,7 +1026,7 @@
         const prevBtn13 = document.getElementById("prev-btn13");
         const nextBtn13 = document.getElementById("next-btn13");
         const productCost13 = document.getElementById("product-cost13")
-        let currentIndex13 = 3;
+        let currentIndex13 = 2;
 
         const productImg14 = document.getElementById("product-img14");
         const productTitle14 = document.getElementById("product-title14");
@@ -1366,7 +1035,7 @@
         const prevBtn14 = document.getElementById("prev-btn14");
         const nextBtn14 = document.getElementById("next-btn14");
         const productCost14 = document.getElementById("product-cost14")
-        let currentIndex14 = 3;
+        let currentIndex14 = 2;
 
         const productImg15 = document.getElementById("product-img15");
         const productTitle15 = document.getElementById("product-title15");
@@ -1375,7 +1044,7 @@
         const prevBtn15 = document.getElementById("prev-btn15");
         const nextBtn15 = document.getElementById("next-btn15");
         const productCost15 = document.getElementById("product-cost15")
-        let currentIndex15 = 3;
+        let currentIndex15 = 1;
 
         const productImg16 = document.getElementById("product-img16");
         const productTitle16 = document.getElementById("product-title16");
@@ -1384,7 +1053,7 @@
         const prevBtn16 = document.getElementById("prev-btn16");
         const nextBtn16 = document.getElementById("next-btn16");
         const productCost16 = document.getElementById("product-cost16")
-        let currentIndex16 = 3;
+        let currentIndex16 = 1;
 
         const productImg17 = document.getElementById("product-img17");
         const productTitle17 = document.getElementById("product-title17");
@@ -1774,14 +1443,14 @@
 
         //lehetővé teszi hogy az előző elemet lásd
         prevBtn.addEventListener("click", () => {
-            if (currentIndex > 0 && currentIndex < 6) {
+            if (currentIndex > 0 && currentIndex < 2) {
                 currentIndex--;
                 showProduct();
             }
         });
         //következő elemre cseréli a kártya tartalmát
         nextBtn.addEventListener("click", () => {
-            if (currentIndex < clothes.polo.length - 1 && currentIndex < 5) {
+            if (currentIndex < clothes.polo.length - 1 && currentIndex < 1) {
                 currentIndex++;
                 showProduct();
             }
@@ -1792,14 +1461,14 @@
         showProduct();
 
         prevBtn2.addEventListener("click", () => {
-            if (currentIndex2 > 0 && currentIndex2 < 6) {
+            if (currentIndex2 > 0 && currentIndex2 < 2) {
                 currentIndex2--;
                 showProduct();
             }
         });
 
         nextBtn2.addEventListener("click", () => {
-            if (currentIndex2 < clothes.pullover.length - 1 && currentIndex2 < 5) {
+            if (currentIndex2 < clothes.pullover.length - 1 && currentIndex2 < 1) {
                 currentIndex2++;
                 showProduct();
             }
@@ -1808,14 +1477,14 @@
         showProduct();
 
         prevBtn3.addEventListener("click", () => {
-            if (currentIndex3 > 0 && currentIndex3 < 3) {
+            if (currentIndex3 > 0 && currentIndex3 < 2) {
                 currentIndex3--;
                 showProduct();
             }
         });
 
         nextBtn3.addEventListener("click", () => {
-            if (currentIndex3 < clothes.nadrag.length - 1 && currentIndex3 < 2) {
+            if (currentIndex3 < clothes.nadrag.length - 1 && currentIndex3 < 1) {
                 currentIndex3++;
                 showProduct();
             }
@@ -1828,7 +1497,7 @@
         });
 
         nextBtn4.addEventListener("click", () => {
-            if (currentIndex4 < clothes.kabat.length - 1 && currentIndex4 < 2) {
+            if (currentIndex4 < clothes.kabat.length - 1 && currentIndex4 < 1) {
                 currentIndex4++;
                 showProduct();
             }
@@ -1841,7 +1510,7 @@
         });
 
         nextBtn5.addEventListener("click", () => {
-            if (currentIndex5 < clothes.rovidNadrag.length - 1 && currentIndex5 < 2) {
+            if (currentIndex5 < clothes.rovidNadrag.length - 1 && currentIndex5 < 1) {
                 currentIndex5++;
                 showProduct();
             }
@@ -1854,7 +1523,7 @@
         });
 
         nextBtn6.addEventListener("click", () => {
-            if (currentIndex6 < clothes.zokni.length - 1 && currentIndex6 < 2) {
+            if (currentIndex6 < clothes.zokni.length - 1 && currentIndex6 < 1) {
                 currentIndex6++;
                 showProduct();
             }
@@ -1886,7 +1555,7 @@
             }
         });
         prevBtn9.addEventListener("click", () => {
-            if (currentIndex9 > 6) {
+            if (currentIndex9 > 2) {
                 currentIndex9--;
                 showProduct();
             }
@@ -1900,7 +1569,7 @@
         });
 
         prevBtn10.addEventListener("click", () => {
-            if (currentIndex10 > 6) {
+            if (currentIndex10 > 2) {
                 currentIndex10--;
                 showProduct();
             }
@@ -1913,7 +1582,7 @@
             }
         });
         prevBtn11.addEventListener("click", () => {
-            if (currentIndex11 > 6) {
+            if (currentIndex11 > 2) {
                 currentIndex11--;
                 showProduct();
             }
@@ -1927,7 +1596,7 @@
         });
 
         prevBtn12.addEventListener("click", () => {
-            if (currentIndex12 > 3) {
+            if (currentIndex12 > 2) {
                 currentIndex12--;
                 showProduct();
             }
@@ -1941,7 +1610,7 @@
         });
 
         prevBtn13.addEventListener("click", () => {
-            if (currentIndex13 > 3) {
+            if (currentIndex13 > 2) {
                 currentIndex13--;
                 showProduct();
             }
@@ -1955,7 +1624,7 @@
         });
 
         prevBtn14.addEventListener("click", () => {
-            if (currentIndex14 > 3) {
+            if (currentIndex14 > 2) {
                 currentIndex14--;
                 showProduct();
             }
@@ -1969,7 +1638,7 @@
         });
 
         prevBtn15.addEventListener("click", () => {
-            if (currentIndex15 > 3) {
+            if (currentIndex15 > 2) {
                 currentIndex15--;
                 showProduct();
             }
@@ -1983,7 +1652,7 @@
         });
 
         prevBtn16.addEventListener("click", () => {
-            if (currentIndex16 > 3) {
+            if (currentIndex16 > 2) {
                 currentIndex16--;
                 showProduct();
             }
@@ -2047,6 +1716,8 @@
                 if (filteredCategory.length > 0) {
                     filteredClothes[category] = filteredCategory.sort((a, b) => a.cost - b.cost);
 
+                    
+
                     for (let i = 0; i < filteredCategory.length; i++) {
                         result += `
           <div class="card col-sm-6 col-md-4 col-lg-3">
@@ -2060,6 +1731,8 @@
           </div>
         `;
                     }
+
+                   
                     document.getElementById(`produc`).innerHTML = result;
                 }
             }
